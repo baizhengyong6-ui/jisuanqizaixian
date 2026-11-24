@@ -139,6 +139,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://engcalculator.work/geometry/h-beam-size-list/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://engcalculator.work/geometry/hk-beam-size-list/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://engcalculator.work/geometry/parallelogram-area/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -200,6 +212,12 @@
   </url>
   <url>
     <loc>https://engcalculator.work/geometry/square-perimeter/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://engcalculator.work/geometry/t-beam-size-list/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

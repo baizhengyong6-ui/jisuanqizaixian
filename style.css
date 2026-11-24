@@ -163,6 +163,25 @@
   .nav-item.active .ico{background:var(--accent);color:#fff;transform:scale(1.04);box-shadow:0 5px 13px -3px var(--accent);}
   .nav-item.active .nav-title{color:var(--accent);}
   .nav-item.active .nav-arrow{opacity:1;transform:translateX(0);color:var(--accent);}
+  /* 型钢数据表子菜单项（几何计算器下方） */
+  .nav-sub-item{
+    display:flex;align-items:flex-start;gap:7px;
+    margin:1px 8px 1px 26px;padding:6px 9px;border-radius:8px;
+    color:var(--text-muted);text-decoration:none;
+    font-size:10.5px;line-height:1.45;font-weight:500;
+    transition:background .15s,color .15s;
+  }
+  .nav-sub-item .sub-dot{
+    flex:none;width:5px;height:5px;border-radius:50%;
+    background:var(--text-muted);opacity:.6;margin-top:5px;
+    transition:background .15s,opacity .15s;
+  }
+  .nav-sub-item:hover{background:var(--key-hover);color:var(--text);}
+  .nav-sub-item:hover .sub-dot{background:#8b5cf6;opacity:1;}
+  .nav-sub-item.active{
+    background:rgba(99,102,241,.14);color:#a5b4fc;font-weight:700;
+  }
+  .nav-sub-item.active .sub-dot{background:#8b5cf6;opacity:1;box-shadow:0 0 6px rgba(139,92,246,.8);}
   .sidebar-foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--sidebar-border);}
   .tbtn{
     border:1px solid var(--tool-border);
@@ -341,6 +360,60 @@
     box-shadow:0 6px 18px -6px rgba(99,102,241,.6);
   }
 
+  /* ===== 型钢数据表页 ===== */
+  body[data-steel] .view{display:none!important;}
+  .steel-doc{flex:none;}
+  .steel-toolbar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+    padding:16px 18px 12px;
+  }
+  .steel-toolbar input[type="text"]{
+    flex:1;min-width:200px;padding:9px 13px;font-size:13px;font-family:inherit;
+    background:var(--input-bg);border:1px solid var(--tool-border);
+    border-radius:10px;color:var(--text);outline:none;transition:border-color .15s;
+  }
+  .steel-toolbar input[type="text"]:focus{border-color:#6f9dff;}
+  .steel-mark-toggle{
+    display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);
+    cursor:pointer;white-space:nowrap;user-select:none;
+  }
+  .steel-mark-toggle input{accent-color:#8b5cf6;cursor:pointer;}
+  .steel-count{font-size:11px;color:var(--text-muted);white-space:nowrap;}
+  .steel-scroller{
+    margin:0 18px;border:1px solid var(--card-border);border-radius:14px;
+    overflow:auto;max-height:72vh;background:var(--display-bg);
+  }
+  .steel-table{border-collapse:separate;border-spacing:0;width:100%;font-size:12px;min-width:760px;}
+  .steel-table thead th{
+    position:sticky;top:0;z-index:5;
+    background:var(--tool-bg);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--card-border);border-right:1px solid var(--card-border);
+    padding:8px 10px;font-weight:700;color:var(--text);white-space:nowrap;text-align:center;
+  }
+  .steel-table thead tr.grp th{font-size:11px;color:var(--text-muted);font-weight:600;padding-top:10px;}
+  .steel-table tbody td{
+    border-bottom:1px solid var(--card-border);border-right:1px solid var(--card-border);
+    padding:6px 10px;text-align:right;color:var(--text);
+    font-family:"SF Mono",Consolas,monospace;white-space:nowrap;
+  }
+  .steel-table tbody td:first-child,
+  .steel-table tbody td:last-child{text-align:left;font-family:inherit;}
+  .steel-table tbody td:first-child{color:var(--op-color);font-weight:700;}
+  .steel-table tbody tr:hover td{background:var(--key-hover);}
+  .steel-table tbody tr.group-start td{border-top:2px solid var(--card-border);}
+  .steel-table tbody tr[data-mark="1"] td{background:rgba(139,92,246,.07);}
+  .steel-table tbody tr[data-mark="1"]:hover td{background:rgba(139,92,246,.14);}
+  .mark-tri{color:#a5b4fc;font-weight:700;margin-right:2px;}
+  .steel-note{
+    padding:10px 18px 4px;font-size:11px;color:var(--text-muted);line-height:1.7;
+  }
+  .steel-note b{color:var(--text);}
+  @media(max-width:620px){
+    .steel-scroller{margin:0 12px;}
+    .steel-table{font-size:11px;}
+    .steel-table thead th,.steel-table tbody td{padding:5px 7px;}
+  }
+
   /* ===== 工具页文档区（置于计算器下方） ===== */
   .tool-doc{padding:22px 26px 4px;border-top:1px solid var(--card-border);border-bottom:none;flex:none;}
   .doc-crumb{font-size:11px;color:var(--text-muted);margin-bottom:10px;}
@@ -393,6 +466,7 @@
     .nav-item{flex:1;justify-content:center;padding:9px 4px;gap:0;}
     .nav-item .ico{display:none;}
     .nav-sub,.nav-arrow{display:none;}
+    .nav-sub-item{display:none;}
     .nav-title{font-size:12px;}
     .nav-item.active::before{left:20%;right:20%;top:auto;bottom:0;width:auto;height:3px;border-radius:3px 3px 0 0;}
     .nav-item:hover{transform:none;}
