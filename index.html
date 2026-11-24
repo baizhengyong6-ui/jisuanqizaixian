@@ -122,21 +122,6 @@
   </aside>
 
   <main class="main">
-    <article class="tool-doc">
-      <h1>在线工程计算工具箱</h1>
-      <p class="doc-lead">免费在线工程计算平台，集成科学计算器、工程计算器、材料计算器与几何计算器四大模块共 29 项功能。全部计算在浏览器本地完成，无需安装、无需注册，打开即用。可通过左侧导航进入每个工具的独立页面，查看对应公式与算例。</p>
-      <section class="doc-sec"><h2>常用公式速览</h2><ul class="doc-formulas">
-        <li><b>简支梁弯矩</b><span>M = q·L²/8</span></li>
-        <li><b>钢材理论重量</b><span>m = 7.85 × 厚度(mm) × 面积(m²) kg</span></li>
-        <li><b>圆台体积</b><span>V = ⅓πh(r² + rR + R²)</span></li>
-        <li><b>截面惯性矩</b><span>矩形 I = b·h³/12</span></li>
-      </ul></section>
-      <section class="doc-sec"><h2>算例</h2><table class="doc-example">
-        <tr><th>简支梁</th><td>q=10 kN/m、L=6 m → 最大弯矩 M = 45 kN·m</td></tr>
-        <tr><th>钢材重量</th><td>厚 10 mm、面积 2 m² 钢板 → 157 kg</td></tr>
-      </table></section>
-      <p class="doc-tip">上述结果由本站计算器实时生成；进入各工具独立页面可修改参数并查看完整计算过程。</p>
-    </article>
     <!-- 视图一：科学计算器 -->
     <section class="view active" id="view-sci">
       <div class="toolbar">
@@ -271,16 +256,21 @@
 
     <!-- 视图四：几何计算器 -->
     <section class="view" id="view-geo">
-      <div class="view-head">
-        <h2 data-i18n="geo.title">几何计算器</h2>
-        <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+      <div class="view-head geo-view-head">
+        <div class="geo-head-txt">
+          <h2 data-i18n="geo.title">几何计算器</h2>
+          <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+        </div>
+        <div class="geo-picker-wrap">
+          <button class="geo-picker-btn" id="geoPickerBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span id="geoPickerLabel">选择计算项</span><span class="geo-picker-caret">▾</span>
+          </button>
+          <div class="geo-picker-menu" id="geoPickerMenu" role="menu"></div>
+        </div>
       </div>
       <div class="tool-grid">
         <section class="card span2">
-          <h3 data-i18n="geo.selectTitle">选择计算项</h3>
-          <div class="row" style="margin-bottom:14px;">
-            <select id="geoItem" title="item" style="flex:1;"></select>
-          </div>
+          <select id="geoItem" title="item" class="geo-item-native" style="display:none;"></select>
           <div class="geo-work">
             <div class="geo-input">
               <div class="fields" id="geoFields"></div>
@@ -302,6 +292,23 @@
         </section>
       </div>
     </section>
+
+    <!-- 说明文档区：置于计算器下方，计算器功能优先展示 -->
+    <article class="tool-doc">
+      <h1>在线工程计算工具箱</h1>
+      <p class="doc-lead">免费在线工程计算平台，集成科学计算器、工程计算器、材料计算器与几何计算器四大模块共 29 项功能。全部计算在浏览器本地完成，无需安装、无需注册，打开即用。可通过左侧导航进入每个工具的独立页面，查看对应公式与算例。</p>
+      <section class="doc-sec"><h2>常用公式速览</h2><ul class="doc-formulas">
+        <li><b>简支梁弯矩</b><span>M = q·L²/8</span></li>
+        <li><b>钢材理论重量</b><span>m = 7.85 × 厚度(mm) × 面积(m²) kg</span></li>
+        <li><b>圆台体积</b><span>V = ⅓πh(r² + rR + R²)</span></li>
+        <li><b>截面惯性矩</b><span>矩形 I = b·h³/12</span></li>
+      </ul></section>
+      <section class="doc-sec"><h2>算例</h2><table class="doc-example">
+        <tr><th>简支梁</th><td>q=10 kN/m、L=6 m → 最大弯矩 M = 45 kN·m</td></tr>
+        <tr><th>钢材重量</th><td>厚 10 mm、面积 2 m² 钢板 → 157 kg</td></tr>
+      </table></section>
+      <p class="doc-tip">上述结果由本站计算器实时生成；进入各工具独立页面可修改参数并查看完整计算过程。</p>
+    </article>
   </main>
 </div>
 

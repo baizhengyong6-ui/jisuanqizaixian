@@ -127,14 +127,6 @@
   </aside>
 
   <main class="main">
-    <article class="tool-doc">
-  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/scientific/">科学计算器</a></nav>
-  <h1>在线科学计算器</h1>
-  <p class="doc-lead">科学计算器支持完整表达式运算与常用科学函数，所有计算在本地浏览器完成，无需安装、无需注册。</p>
-  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>四则与括号</b><span>a + b、a − b、a × b、a ÷ b，支持括号优先级与隐式乘法，如 2(3+4)=14</span></li><li><b>幂与阶乘</b><span>a^b 计算幂；n! 计算阶乘，如 5! = 120</span></li><li><b>三角函数</b><span>sin、cos、tan 及反函数 arcsin、arccos、arctan，支持 DEG 角度制 / RAD 弧度制</span></li><li><b>对数与根式</b><span>ln(x) 自然对数、log(x) 常用对数、√(x) 平方根，如 √(9) = 3</span></li></ul></section>
-  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>输入表达式</th><td>sin(30) + 2^3</td></tr><tr><th>角度制</th><td>DEG（30°）</td></tr><tr><th>计算</th><td>sin(30°)=0.5，2^3=8</td></tr><tr><th>结果</th><td>0.5 + 8 = 8.5</td></tr></table></section>
-  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
-</article>
     <!-- 视图一：科学计算器 -->
     <section class="view active" id="view-sci">
       <div class="toolbar">
@@ -269,16 +261,21 @@
 
     <!-- 视图四：几何计算器 -->
     <section class="view" id="view-geo">
-      <div class="view-head">
-        <h2 data-i18n="geo.title">几何计算器</h2>
-        <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+      <div class="view-head geo-view-head">
+        <div class="geo-head-txt">
+          <h2 data-i18n="geo.title">几何计算器</h2>
+          <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+        </div>
+        <div class="geo-picker-wrap">
+          <button class="geo-picker-btn" id="geoPickerBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span id="geoPickerLabel">选择计算项</span><span class="geo-picker-caret">▾</span>
+          </button>
+          <div class="geo-picker-menu" id="geoPickerMenu" role="menu"></div>
+        </div>
       </div>
       <div class="tool-grid">
         <section class="card span2">
-          <h3 data-i18n="geo.selectTitle">选择计算项</h3>
-          <div class="row" style="margin-bottom:14px;">
-            <select id="geoItem" title="item" style="flex:1;"></select>
-          </div>
+          <select id="geoItem" title="item" class="geo-item-native" style="display:none;"></select>
           <div class="geo-work">
             <div class="geo-input">
               <div class="fields" id="geoFields"></div>
@@ -300,6 +297,16 @@
         </section>
       </div>
     </section>
+
+    <!-- 说明文档区：置于计算器下方，计算器功能优先展示 -->
+    <article class="tool-doc">
+  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/scientific/">科学计算器</a></nav>
+  <h1>在线科学计算器</h1>
+  <p class="doc-lead">科学计算器支持完整表达式运算与常用科学函数，所有计算在本地浏览器完成，无需安装、无需注册。</p>
+  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>四则与括号</b><span>a + b、a − b、a × b、a ÷ b，支持括号优先级与隐式乘法，如 2(3+4)=14</span></li><li><b>幂与阶乘</b><span>a^b 计算幂；n! 计算阶乘，如 5! = 120</span></li><li><b>三角函数</b><span>sin、cos、tan 及反函数 arcsin、arccos、arctan，支持 DEG 角度制 / RAD 弧度制</span></li><li><b>对数与根式</b><span>ln(x) 自然对数、log(x) 常用对数、√(x) 平方根，如 √(9) = 3</span></li></ul></section>
+  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>输入表达式</th><td>sin(30) + 2^3</td></tr><tr><th>角度制</th><td>DEG（30°）</td></tr><tr><th>计算</th><td>sin(30°)=0.5，2^3=8</td></tr><tr><th>结果</th><td>0.5 + 8 = 8.5</td></tr></table></section>
+  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
+</article>
   </main>
 </div>
 

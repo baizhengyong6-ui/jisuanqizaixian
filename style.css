@@ -312,8 +312,39 @@
   .gs-val{fill:var(--fig-text);font:600 12px "SF Mono",Consolas,monospace;}
   .gs-pt{fill:var(--fig-dim);}
 
-  /* ===== 工具页文档区 ===== */
-  .tool-doc{padding:22px 26px 4px;border-bottom:1px solid var(--card-border);flex:none;}
+  /* ===== 几何右上角选择菜单 ===== */
+  .geo-view-head{display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative;}
+  .geo-head-txt{min-width:0;}
+  .geo-picker-wrap{position:relative;flex:none;}
+  .geo-picker-btn{
+    display:flex;align-items:center;gap:8px;
+    border:1px solid var(--tool-border);background:var(--tool-bg);color:var(--text);
+    border-radius:9px;padding:9px 13px;font-size:13px;font-weight:600;font-family:inherit;
+    cursor:pointer;transition:all .15s;white-space:nowrap;max-width:190px;
+  }
+  .geo-picker-btn:hover{background:var(--key-hover);border-color:var(--accent-soft);}
+  .geo-picker-btn #geoPickerLabel{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .geo-picker-caret{color:var(--op-color);font-size:11px;transition:transform .15s;}
+  .geo-picker-wrap:has(.geo-picker-menu.open) .geo-picker-caret{transform:rotate(180deg);}
+  .geo-picker-menu{
+    display:none;position:absolute;right:0;top:calc(100% + 8px);z-index:60;
+    width:560px;max-width:calc(100vw - 40px);max-height:min(70vh,540px);overflow-y:auto;
+    background:var(--card);border:1px solid var(--card-border);border-radius:14px;
+    box-shadow:0 18px 46px -14px rgba(0,0,0,.5);padding:8px;
+  }
+  .geo-picker-menu.open{display:block;}
+  .gp-group{padding:4px 0;}
+  .gp-group+.gp-group{border-top:1px solid var(--card-border);margin-top:4px;padding-top:8px;}
+  .gp-gtitle{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:.5px;padding:5px 10px 6px;}
+  .gp-item{
+    display:block;padding:7px 11px;border-radius:8px;font-size:12.5px;
+    color:var(--text);text-decoration:none;line-height:1.4;transition:background .12s;
+  }
+  .gp-item:hover{background:var(--key-hover);}
+  .gp-item.active{background:var(--op-bg);color:var(--op-color);font-weight:700;}
+
+  /* ===== 工具页文档区（置于计算器下方） ===== */
+  .tool-doc{padding:22px 26px 4px;border-top:1px solid var(--card-border);border-bottom:none;flex:none;}
   .doc-crumb{font-size:11px;color:var(--text-muted);margin-bottom:10px;}
   .doc-crumb a{color:var(--op-color);text-decoration:none;}
   .doc-crumb a:hover{text-decoration:underline;}
@@ -379,6 +410,11 @@
     .card.span2{grid-column:span 1;}
     .two-col{grid-template-columns:1fr;}
     .geo-work{grid-template-columns:1fr;}
+    .geo-view-head{flex-wrap:wrap;gap:10px;}
+    .geo-picker-wrap{width:100%;}
+    .geo-picker-btn{width:100%;max-width:none;justify-content:space-between;}
+    .geo-picker-menu{width:100%;right:0;}
+    .gp-item{padding:8px 11px;}
     .seo-grid{grid-template-columns:1fr;}
     .seo-content{padding:18px 16px 12px;}
   }

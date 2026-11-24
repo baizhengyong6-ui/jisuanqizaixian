@@ -133,14 +133,6 @@
   </aside>
 
   <main class="main">
-    <article class="tool-doc">
-  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/geometry/">几何计算器</a> › <a href="/geometry/cuboid-surface-area/">长方体表面积</a></nav>
-  <h1>长方体表面积计算器</h1>
-  <p class="doc-lead">在线长方体表面积计算器，输入参数即时得到计算结果，并在图形上标注所需参数的位置。</p>
-  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>计算公式</b><span>S = 2(ab + bc + ac)</span></li><li><b>边/长 a</b><span>输入值 100（单位见输入框）</span></li><li><b>边/宽 b</b><span>输入值 80（单位见输入框）</span></li><li><b>高 h</b><span>输入值 200（单位见输入框）</span></li></ul></section>
-  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>输入参数</th><td>边/长 a=100、边/宽 b=80、高 h=200</td></tr><tr><th>表面积</th><td>88000 mm²</td></tr><tr><th>说明</th><td>结果由本页计算器按默认参数实时生成，可修改参数重新计算</td></tr></table></section>
-  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
-</article>
     <!-- 视图一：科学计算器 -->
     <section class="view" id="view-sci">
       <div class="toolbar">
@@ -275,16 +267,21 @@
 
     <!-- 视图四：几何计算器 -->
     <section class="view active" id="view-geo">
-      <div class="view-head">
-        <h2 data-i18n="geo.title">几何计算器</h2>
-        <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+      <div class="view-head geo-view-head">
+        <div class="geo-head-txt">
+          <h2 data-i18n="geo.title">几何计算器</h2>
+          <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+        </div>
+        <div class="geo-picker-wrap">
+          <button class="geo-picker-btn" id="geoPickerBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span id="geoPickerLabel">选择计算项</span><span class="geo-picker-caret">▾</span>
+          </button>
+          <div class="geo-picker-menu" id="geoPickerMenu" role="menu"></div>
+        </div>
       </div>
       <div class="tool-grid">
         <section class="card span2">
-          <h3 data-i18n="geo.selectTitle">选择计算项</h3>
-          <div class="row" style="margin-bottom:14px;">
-            <select id="geoItem" title="item" style="flex:1;"></select>
-          </div>
+          <select id="geoItem" title="item" class="geo-item-native" style="display:none;"></select>
           <div class="geo-work">
             <div class="geo-input">
               <div class="fields" id="geoFields"></div>
@@ -306,6 +303,16 @@
         </section>
       </div>
     </section>
+
+    <!-- 说明文档区：置于计算器下方，计算器功能优先展示 -->
+    <article class="tool-doc">
+  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/geometry/">几何计算器</a> › <a href="/geometry/cuboid-surface-area/">长方体表面积</a></nav>
+  <h1>长方体表面积计算器</h1>
+  <p class="doc-lead">在线长方体表面积计算器，输入参数即时得到计算结果，并在图形上标注所需参数的位置。</p>
+  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>计算公式</b><span>S = 2(ab + bc + ac)</span></li><li><b>边/长 a</b><span>输入值 100（单位见输入框）</span></li><li><b>边/宽 b</b><span>输入值 80（单位见输入框）</span></li><li><b>高 h</b><span>输入值 200（单位见输入框）</span></li></ul></section>
+  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>输入参数</th><td>边/长 a=100、边/宽 b=80、高 h=200</td></tr><tr><th>表面积</th><td>88000 mm²</td></tr><tr><th>说明</th><td>结果由本页计算器按默认参数实时生成，可修改参数重新计算</td></tr></table></section>
+  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
+</article>
   </main>
 </div>
 

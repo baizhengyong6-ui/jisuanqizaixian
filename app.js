@@ -827,6 +827,19 @@
   ];
   const GEO_MAP={};
   GEO_GROUPS.forEach(grp=>grp.items.forEach(it=>{GEO_MAP[it.id]=it;}));
+  // 几何项 id → 独立页面 slug（与 build_pages.py 的 GEO_SLUG 保持一致）
+  const GEO_SLUG={
+    cone_sa:'cone-surface-area',frustum_sa:'frustum-surface-area',cone_vol:'cone-volume',
+    frustum_vol:'frustum-volume',cyl_lateral:'cylinder-lateral-area',cyl_sa:'cylinder-surface-area',
+    cyl_vol:'cylinder-volume',cuboid_vol:'cuboid-volume',cuboid_sa:'cuboid-surface-area',
+    cube_vol:'cube-volume',cube_sa:'cube-surface-area',sector_area:'sector-area',
+    sector_perim:'sector-perimeter',annulus_area:'annulus-area',circle_area:'circle-area',
+    circle_perim:'circle-circumference',trapezoid_area:'trapezoid-area',trapezoid_perim:'trapezoid-perimeter',
+    rhombus_area:'rhombus-area',rhombus_perim:'rhombus-perimeter',para_perim:'parallelogram-perimeter',
+    para_area:'parallelogram-area',tri_area:'triangle-area',tri_perim:'triangle-perimeter',
+    square_perim:'square-perimeter',square_area:'square-area',rect_calc:'rectangle-calculator',
+    rect_area:'rectangle-area',rect_perim:'rectangle-perimeter'
+  };
 
   /* ---------- 几何简图（SVG，参数标注在真实位置） ---------- */
   const svgWrap=inner=>'<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img">'+inner+'</svg>';
@@ -1070,7 +1083,47 @@
     if(it) it.f.forEach(fld=>{const el=document.getElementById('geo_f_'+fld.k);if(el) el.value=fld.d;});
     document.getElementById('geoResult').innerHTML='';
   }
+  // 构建几何右上角选择菜单：分组 + 每项链接到独立 URL
+  function buildGeoPicker(){
+    const menu=document.getElementById('geoPickerMenu');
+    if(!menu) return;
+    const cur=geoItemSel.value;
+    let html='';
+    GEO_GROUPS.forEach(grp=>{
+      html+='<div class="gp-group"><div class="gp-gtitle">'+t(grp.g)+'</div>';
+      grp.items.forEach(it=>{
+        const slug=GEO_SLUG[it.id]||it.id;
+        const active=it.id===cur?' active':'';
+        html+='<a class="gp-item'+active+'" href="/geometry/'+slug+'/" role="menuitem"'
+          +(it.id===cur?' aria-current="page"':'')+'>'+t(it.n)+'</a>';
+      });
+      html+='</div>';
+    });
+    menu.innerHTML=html;
+    const label=document.getElementById('geoPickerLabel');
+    const it=GEO_MAP[cur];
+    if(label&&it) label.textContent=t(it.n);
+  }
+  // 绑定右上角菜单展开/收起
+  function bindGeoPicker(){
+    const btn=document.getElementById('geoPickerBtn');
+    const menu=document.getElementById('geoPickerMenu');
+    if(!btn||!menu) return;
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      const open=menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(e){
+      if(!menu.contains(e.target)&&e.target!==btn){
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  bindGeoPicker();
   fillGeoItems();
+  buildGeoPicker();
   // 几何子项独立页：按 body[data-geo-item] 预选对应计算项
   const presetGeo=(document.body&&document.body.dataset&&document.body.dataset.geoItem)||'';
   if(presetGeo&&GEO_MAP[presetGeo]){
@@ -1081,15 +1134,17 @@
     if(last&&GEO_MAP[last]) geoItemSel.value=last;
   }
   renderGeoFields();
+  buildGeoPicker();
   geoItemSel.addEventListener('change',function(){
     try{ localStorage.setItem('sci-calc-geo',geoItemSel.value); }catch(e){}
     renderGeoFields();
+    buildGeoPicker();
   });
   document.getElementById('geoCalc').addEventListener('click',calcGeo);
   document.getElementById('geoClear').addEventListener('click',clearGeo);
-  // 语言切换时重建几何下拉与字段：并入 applyLang
+  // 语言切换时重建几何下拉、字段与右上角菜单：并入 applyLang
   const _applyLang=applyLang;
-  applyLang=function(){ _applyLang(); fillGeoItems(); renderGeoFields(); };
+  applyLang=function(){ _applyLang(); fillGeoItems(); renderGeoFields(); buildGeoPicker(); };
 
   /* ==================== 启动 ==================== */
   render();

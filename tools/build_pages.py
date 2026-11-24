@@ -165,6 +165,8 @@ def make_page(path, title, desc, keywords, h1, lead, formulas, example, active_v
     article = build_article(h1, lead, formulas, example, crumbs)
     # 替换 head 中的 SEO meta（用标记法）
     html = home
+    # 先移除首页模板自带的说明文档区，避免与子页文档区重复
+    html = re.sub(r'\n\s*<article class="tool-doc">.*?</article>', '', html, count=1, flags=re.S)
     html = re.sub(r"<title>.*?</title>", "<title>%s</title>" % esc(title), html, count=1, flags=re.S)
     html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="%s">' % esc(desc), html, count=1)
     html = re.sub(r'<meta name="keywords" content="[^"]*">', '<meta name="keywords" content="%s">' % esc(keywords), html, count=1)
@@ -208,8 +210,8 @@ def make_page(path, title, desc, keywords, h1, lead, formulas, example, active_v
     for v in ("view-sci","view-eng","view-mat","view-geo"):
         want = 'class="view active" id="%s"' % v if v == active_view else 'class="view" id="%s"' % v
         html = re.sub(r'class="view(?: active)?" id="%s"' % v, want, html, count=1)
-    # 注入 article 到 main 内最前
-    html = html.replace('<main class="main">', '<main class="main">\n    ' + article, 1)
+    # 注入 article 到 main 内最后（计算器视图下方），让计算器功能优先展示
+    html = html.replace('  </main>', '    ' + article + '\n  </main>', 1)
     # 首页底部通用 SEO 区在子页简化掉（保留版权行）
     html = re.sub(r'<footer class="seo-content">.*?</footer>',
                   '<footer class="seo-content"><p class="seo-copy">© 工程计算工具箱 · 免费在线科学、工程、材料与几何计算工具 · <a href="/">返回首页</a></p></footer>',

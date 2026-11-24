@@ -133,14 +133,6 @@
   </aside>
 
   <main class="main">
-    <article class="tool-doc">
-  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/engineering/">工程计算器</a> › <a href="/engineering/stress-check/">应力验算</a></nav>
-  <h1>构件应力验算计算器</h1>
-  <p class="doc-lead">应力验算器提供轴心受力与受弯两种基本工况的正应力计算，单位自动按 kN、mm 换算为 MPa。</p>
-  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>轴心受力</b><span>σ = N / A（N 为轴力，A 为截面积）</span></li><li><b>受弯应力</b><span>σ = M / W（M 为弯矩，W 为截面模量）</span></li><li><b>单位换算</b><span>1 kN = 1000 N，1 kN·m = 10⁶ N·mm，1 MPa = 1 N/mm²</span></li></ul></section>
-  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>轴心受力</th><td>N=100 kN，A=1000 mm²</td></tr><tr><th>轴心应力</th><td>100000/1000 = 100 MPa</td></tr><tr><th>受弯应力</th><td>M=50 kN·m，W=5×10⁵ mm³</td></tr><tr><th>受弯结果</th><td>50×10⁶/5×10⁵ = 100 MPa</td></tr></table></section>
-  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
-</article>
     <!-- 视图一：科学计算器 -->
     <section class="view" id="view-sci">
       <div class="toolbar">
@@ -275,16 +267,21 @@
 
     <!-- 视图四：几何计算器 -->
     <section class="view" id="view-geo">
-      <div class="view-head">
-        <h2 data-i18n="geo.title">几何计算器</h2>
-        <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+      <div class="view-head geo-view-head">
+        <div class="geo-head-txt">
+          <h2 data-i18n="geo.title">几何计算器</h2>
+          <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+        </div>
+        <div class="geo-picker-wrap">
+          <button class="geo-picker-btn" id="geoPickerBtn" type="button" aria-haspopup="true" aria-expanded="false">
+            <span id="geoPickerLabel">选择计算项</span><span class="geo-picker-caret">▾</span>
+          </button>
+          <div class="geo-picker-menu" id="geoPickerMenu" role="menu"></div>
+        </div>
       </div>
       <div class="tool-grid">
         <section class="card span2">
-          <h3 data-i18n="geo.selectTitle">选择计算项</h3>
-          <div class="row" style="margin-bottom:14px;">
-            <select id="geoItem" title="item" style="flex:1;"></select>
-          </div>
+          <select id="geoItem" title="item" class="geo-item-native" style="display:none;"></select>
           <div class="geo-work">
             <div class="geo-input">
               <div class="fields" id="geoFields"></div>
@@ -306,6 +303,16 @@
         </section>
       </div>
     </section>
+
+    <!-- 说明文档区：置于计算器下方，计算器功能优先展示 -->
+    <article class="tool-doc">
+  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/engineering/">工程计算器</a> › <a href="/engineering/stress-check/">应力验算</a></nav>
+  <h1>构件应力验算计算器</h1>
+  <p class="doc-lead">应力验算器提供轴心受力与受弯两种基本工况的正应力计算，单位自动按 kN、mm 换算为 MPa。</p>
+  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>轴心受力</b><span>σ = N / A（N 为轴力，A 为截面积）</span></li><li><b>受弯应力</b><span>σ = M / W（M 为弯矩，W 为截面模量）</span></li><li><b>单位换算</b><span>1 kN = 1000 N，1 kN·m = 10⁶ N·mm，1 MPa = 1 N/mm²</span></li></ul></section>
+  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>轴心受力</th><td>N=100 kN，A=1000 mm²</td></tr><tr><th>轴心应力</th><td>100000/1000 = 100 MPa</td></tr><tr><th>受弯应力</th><td>M=50 kN·m，W=5×10⁵ mm³</td></tr><tr><th>受弯结果</th><td>50×10⁶/5×10⁵ = 100 MPa</td></tr></table></section>
+  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
+</article>
   </main>
 </div>
 
