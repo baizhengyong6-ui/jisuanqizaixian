@@ -1083,47 +1083,23 @@
     if(it) it.f.forEach(fld=>{const el=document.getElementById('geo_f_'+fld.k);if(el) el.value=fld.d;});
     document.getElementById('geoResult').innerHTML='';
   }
-  // 构建几何右上角选择菜单：分组 + 每项链接到独立 URL
-  function buildGeoPicker(){
-    const menu=document.getElementById('geoPickerMenu');
-    if(!menu) return;
+  // 构建几何顶部横向平铺按钮导航：29 项圆角按钮，各自链接到独立 URL
+  function buildGeoChips(){
+    const bar=document.getElementById('geoChipbar');
+    if(!bar) return;
     const cur=geoItemSel.value;
     let html='';
     GEO_GROUPS.forEach(grp=>{
-      html+='<div class="gp-group"><div class="gp-gtitle">'+t(grp.g)+'</div>';
       grp.items.forEach(it=>{
         const slug=GEO_SLUG[it.id]||it.id;
         const active=it.id===cur?' active':'';
-        html+='<a class="gp-item'+active+'" href="/geometry/'+slug+'/" role="menuitem"'
+        html+='<a class="geo-chip'+active+'" href="/geometry/'+slug+'/"'
           +(it.id===cur?' aria-current="page"':'')+'>'+t(it.n)+'</a>';
       });
-      html+='</div>';
     });
-    menu.innerHTML=html;
-    const label=document.getElementById('geoPickerLabel');
-    const it=GEO_MAP[cur];
-    if(label&&it) label.textContent=t(it.n);
+    bar.innerHTML=html;
   }
-  // 绑定右上角菜单展开/收起
-  function bindGeoPicker(){
-    const btn=document.getElementById('geoPickerBtn');
-    const menu=document.getElementById('geoPickerMenu');
-    if(!btn||!menu) return;
-    btn.addEventListener('click',function(e){
-      e.stopPropagation();
-      const open=menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded',open?'true':'false');
-    });
-    document.addEventListener('click',function(e){
-      if(!menu.contains(e.target)&&e.target!==btn){
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded','false');
-      }
-    });
-  }
-  bindGeoPicker();
   fillGeoItems();
-  buildGeoPicker();
   // 几何子项独立页：按 body[data-geo-item] 预选对应计算项
   const presetGeo=(document.body&&document.body.dataset&&document.body.dataset.geoItem)||'';
   if(presetGeo&&GEO_MAP[presetGeo]){
@@ -1134,17 +1110,17 @@
     if(last&&GEO_MAP[last]) geoItemSel.value=last;
   }
   renderGeoFields();
-  buildGeoPicker();
+  buildGeoChips();
   geoItemSel.addEventListener('change',function(){
     try{ localStorage.setItem('sci-calc-geo',geoItemSel.value); }catch(e){}
     renderGeoFields();
-    buildGeoPicker();
+    buildGeoChips();
   });
   document.getElementById('geoCalc').addEventListener('click',calcGeo);
   document.getElementById('geoClear').addEventListener('click',clearGeo);
-  // 语言切换时重建几何下拉、字段与右上角菜单：并入 applyLang
+  // 语言切换时重建几何下拉、字段与按钮导航：并入 applyLang
   const _applyLang=applyLang;
-  applyLang=function(){ _applyLang(); fillGeoItems(); renderGeoFields(); buildGeoPicker(); };
+  applyLang=function(){ _applyLang(); fillGeoItems(); renderGeoFields(); buildGeoChips(); };
 
   /* ==================== 启动 ==================== */
   render();

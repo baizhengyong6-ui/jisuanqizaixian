@@ -34,38 +34,42 @@
     --fig-text:#334155;
   }
   [data-theme="dark"]{
-    --bg:linear-gradient(135deg,#0b1220 0%,#1a1733 100%);
-    --card:#151d2e;
-    --card-border:#253149;
+    --bg:
+      radial-gradient(900px 520px at 12% -8%, rgba(99,102,241,.17), transparent 60%),
+      radial-gradient(820px 520px at 108% 18%, rgba(59,130,246,.13), transparent 55%),
+      radial-gradient(600px 400px at 50% 115%, rgba(139,92,246,.10), transparent 60%),
+      linear-gradient(160deg,#121622 0%,#131a29 55%,#181c30 100%);
+    --card:rgba(19,24,38,.68);
+    --card-border:rgba(126,146,206,.15);
     --text:#e6edf7;
-    --text-muted:#7b889f;
-    --display-bg:#0e1626;
-    --display-border:#243049;
-    --key-bg:#1b2538;
-    --key-border:#2a3852;
-    --key-hover:#253149;
-    --key-active:#2e3c56;
-    --sci-bg:#232544;
+    --text-muted:#8593ab;
+    --display-bg:rgba(11,16,27,.72);
+    --display-border:rgba(126,146,206,.15);
+    --key-bg:rgba(27,35,54,.62);
+    --key-border:rgba(132,152,212,.17);
+    --key-hover:rgba(41,52,78,.66);
+    --key-active:rgba(55,67,100,.7);
+    --sci-bg:rgba(46,49,96,.55);
     --sci-color:#a5b4fc;
-    --sci-hover:#2e3160;
-    --op-bg:#1c2c50;
-    --op-color:#7cb0ff;
-    --op-hover:#243a68;
-    --eq-bg:linear-gradient(135deg,#5b6cf0,#2f6fe0);
+    --sci-hover:rgba(46,49,96,.9);
+    --op-bg:rgba(38,58,104,.55);
+    --op-color:#6f9dff;
+    --op-hover:rgba(46,70,124,.7);
+    --eq-bg:linear-gradient(135deg,#4f8cff,#8b5cf6);
     --eq-color:#ffffff;
-    --tool-bg:#1b2538;
-    --tool-border:#2a3852;
-    --shadow:0 24px 55px -18px rgba(0,0,0,.6),0 4px 12px rgba(0,0,0,.3);
-    --hist-bg:#111a2b;
+    --tool-bg:rgba(25,32,50,.62);
+    --tool-border:rgba(132,152,212,.17);
+    --shadow:0 24px 60px -18px rgba(0,0,0,.65),0 4px 14px rgba(0,0,0,.35);
+    --hist-bg:rgba(14,19,31,.6);
     --danger:#f87171;
-    --sidebar-bg:#101827;
-    --sidebar-border:#253149;
-    --nav-active-bg:#1c2740;
-    --nav-active-color:#7cb0ff;
-    --input-bg:#0e1626;
+    --sidebar-bg:rgba(13,18,30,.5);
+    --sidebar-border:rgba(126,146,206,.12);
+    --nav-active-bg:rgba(38,49,80,.6);
+    --nav-active-color:#a5b4fc;
+    --input-bg:rgba(11,16,27,.72);
     --fig-line:#a5b4fc;
     --fig-fill:rgba(165,180,252,.12);
-    --fig-dim:#f9a8d4;
+    --fig-dim:#f0abfc;
     --fig-text:#cbd5e1;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -88,6 +92,8 @@
     border-radius:24px;
     box-shadow:var(--shadow);
     overflow:hidden;
+    backdrop-filter:blur(20px) saturate(140%);
+    -webkit-backdrop-filter:blur(20px) saturate(140%);
     transition:background .3s,border-color .3s;
   }
 
@@ -312,36 +318,28 @@
   .gs-val{fill:var(--fig-text);font:600 12px "SF Mono",Consolas,monospace;}
   .gs-pt{fill:var(--fig-dim);}
 
-  /* ===== 几何右上角选择菜单 ===== */
-  .geo-view-head{display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative;}
-  .geo-head-txt{min-width:0;}
-  .geo-picker-wrap{position:relative;flex:none;}
-  .geo-picker-btn{
-    display:flex;align-items:center;gap:8px;
-    border:1px solid var(--tool-border);background:var(--tool-bg);color:var(--text);
-    border-radius:9px;padding:9px 13px;font-size:13px;font-weight:600;font-family:inherit;
-    cursor:pointer;transition:all .15s;white-space:nowrap;max-width:190px;
+  /* ===== 几何顶部横向平铺按钮导航 ===== */
+  .geo-chipbar{
+    display:flex;flex-wrap:wrap;gap:8px;
+    padding:14px 18px;border-bottom:1px solid var(--card-border);
   }
-  .geo-picker-btn:hover{background:var(--key-hover);border-color:var(--accent-soft);}
-  .geo-picker-btn #geoPickerLabel{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .geo-picker-caret{color:var(--op-color);font-size:11px;transition:transform .15s;}
-  .geo-picker-wrap:has(.geo-picker-menu.open) .geo-picker-caret{transform:rotate(180deg);}
-  .geo-picker-menu{
-    display:none;position:absolute;right:0;top:calc(100% + 8px);z-index:60;
-    width:560px;max-width:calc(100vw - 40px);max-height:min(70vh,540px);overflow-y:auto;
-    background:var(--card);border:1px solid var(--card-border);border-radius:14px;
-    box-shadow:0 18px 46px -14px rgba(0,0,0,.5);padding:8px;
+  .geo-chip{
+    display:inline-flex;align-items:center;
+    padding:7px 13px;border-radius:999px;
+    background:var(--tool-bg);border:1px solid var(--tool-border);
+    color:var(--text);font-size:12.5px;font-weight:600;font-family:inherit;
+    text-decoration:none;white-space:nowrap;cursor:pointer;
+    transition:background .15s,border-color .15s,color .15s,box-shadow .15s,transform .15s;
   }
-  .geo-picker-menu.open{display:block;}
-  .gp-group{padding:4px 0;}
-  .gp-group+.gp-group{border-top:1px solid var(--card-border);margin-top:4px;padding-top:8px;}
-  .gp-gtitle{font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:.5px;padding:5px 10px 6px;}
-  .gp-item{
-    display:block;padding:7px 11px;border-radius:8px;font-size:12.5px;
-    color:var(--text);text-decoration:none;line-height:1.4;transition:background .12s;
+  .geo-chip:hover{
+    background:var(--key-hover);border-color:var(--accent-soft);
+    color:var(--op-color);transform:translateY(-1px);
   }
-  .gp-item:hover{background:var(--key-hover);}
-  .gp-item.active{background:var(--op-bg);color:var(--op-color);font-weight:700;}
+  .geo-chip.active{
+    background:linear-gradient(135deg,#4f8cff,#8b5cf6);
+    border-color:transparent;color:#fff;font-weight:700;
+    box-shadow:0 6px 18px -6px rgba(99,102,241,.6);
+  }
 
   /* ===== 工具页文档区（置于计算器下方） ===== */
   .tool-doc{padding:22px 26px 4px;border-top:1px solid var(--card-border);border-bottom:none;flex:none;}
@@ -410,11 +408,8 @@
     .card.span2{grid-column:span 1;}
     .two-col{grid-template-columns:1fr;}
     .geo-work{grid-template-columns:1fr;}
-    .geo-view-head{flex-wrap:wrap;gap:10px;}
-    .geo-picker-wrap{width:100%;}
-    .geo-picker-btn{width:100%;max-width:none;justify-content:space-between;}
-    .geo-picker-menu{width:100%;right:0;}
-    .gp-item{padding:8px 11px;}
+    .geo-chipbar{padding:12px 14px;gap:7px;}
+    .geo-chip{padding:7px 11px;font-size:12px;}
     .seo-grid{grid-template-columns:1fr;}
     .seo-content{padding:18px 16px 12px;}
   }

@@ -261,13 +261,9 @@
           <h2 data-i18n="geo.title">几何计算器</h2>
           <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
         </div>
-        <div class="geo-picker-wrap">
-          <button class="geo-picker-btn" id="geoPickerBtn" type="button" aria-haspopup="true" aria-expanded="false">
-            <span id="geoPickerLabel">选择计算项</span><span class="geo-picker-caret">▾</span>
-          </button>
-          <div class="geo-picker-menu" id="geoPickerMenu" role="menu"></div>
-        </div>
       </div>
+      <!-- 顶部横向平铺按钮导航：切换计算类型，每项独立网址，无下拉 -->
+      <div class="geo-chipbar" id="geoChipbar"></div>
       <div class="tool-grid">
         <section class="card span2">
           <select id="geoItem" title="item" class="geo-item-native" style="display:none;"></select>
