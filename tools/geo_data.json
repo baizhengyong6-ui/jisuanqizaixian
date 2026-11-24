@@ -1,0 +1,763 @@
+[
+  {
+    "id": "cone_sa",
+    "name": "圆锥表面积",
+    "fx": "S = πr² + πrl,  l = √(r²+h²)",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "母线长",
+        "value": 223.606798,
+        "unit": "mm"
+      },
+      {
+        "label": "底面积",
+        "value": 31415.926536,
+        "unit": "mm²"
+      },
+      {
+        "label": "侧面积",
+        "value": 70248.14731,
+        "unit": "mm²"
+      },
+      {
+        "label": "表面积",
+        "value": 101664.073846,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "frustum_sa",
+    "name": "圆台表面积",
+    "fx": "S = π(r²+R²) + π(r+R)l,  l = √((R−r)²+h²)",
+    "fields": [
+      {
+        "key": "rTop",
+        "label": "上底半径 r (mm)",
+        "value": 60
+      },
+      {
+        "key": "rBot",
+        "label": "下底半径 R (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "母线长",
+        "value": 203.960781,
+        "unit": "mm"
+      },
+      {
+        "label": "上底面积",
+        "value": 11309.733553,
+        "unit": "mm²"
+      },
+      {
+        "label": "底面积",
+        "value": 31415.926536,
+        "unit": "mm²"
+      },
+      {
+        "label": "侧面积",
+        "value": 102521.870364,
+        "unit": "mm²"
+      },
+      {
+        "label": "表面积",
+        "value": 145247.530453,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "cone_vol",
+    "name": "圆锥体积",
+    "fx": "V = ⅓ πr²h",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "体积",
+        "value": 2094395.102393,
+        "unit": "mm³"
+      }
+    ]
+  },
+  {
+    "id": "frustum_vol",
+    "name": "圆台体积",
+    "fx": "V = ⅓ πh(r² + rR + R²)",
+    "fields": [
+      {
+        "key": "rTop",
+        "label": "上底半径 r (mm)",
+        "value": 60
+      },
+      {
+        "key": "rBot",
+        "label": "下底半径 R (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "体积",
+        "value": 4105014.400691,
+        "unit": "mm³"
+      }
+    ]
+  },
+  {
+    "id": "cyl_lateral",
+    "name": "圆柱侧面积",
+    "fx": "S = 2πrh",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "侧面积",
+        "value": 125663.706144,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "cyl_sa",
+    "name": "圆柱表面积",
+    "fx": "S = 2πrh + 2πr²",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "侧面积",
+        "value": 125663.706144,
+        "unit": "mm²"
+      },
+      {
+        "label": "底面积",
+        "value": 31415.926536,
+        "unit": "mm²"
+      },
+      {
+        "label": "表面积",
+        "value": 188495.559215,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "cyl_vol",
+    "name": "圆柱体积",
+    "fx": "V = πr²h",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "体积",
+        "value": 6283185.30718,
+        "unit": "mm³"
+      }
+    ]
+  },
+  {
+    "id": "cuboid_vol",
+    "name": "长方体体积",
+    "fx": "V = a·b·c",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "体积",
+        "value": 1600000,
+        "unit": "mm³"
+      }
+    ]
+  },
+  {
+    "id": "cuboid_sa",
+    "name": "长方体表面积",
+    "fx": "S = 2(ab + bc + ac)",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "表面积",
+        "value": 88000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "cube_vol",
+    "name": "正方体体积",
+    "fx": "V = a³",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "体积",
+        "value": 1000000,
+        "unit": "mm³"
+      }
+    ]
+  },
+  {
+    "id": "cube_sa",
+    "name": "正方体表面积",
+    "fx": "S = 6a²",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "表面积",
+        "value": 60000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "sector_area",
+    "name": "扇形面积",
+    "fx": "S = (θ/360)·πr²",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "th",
+        "label": "圆心角 θ (°)",
+        "value": 90
+      }
+    ],
+    "results": [
+      {
+        "label": "弧长",
+        "value": 157.079633,
+        "unit": "mm"
+      },
+      {
+        "label": "面积",
+        "value": 7853.981634,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "sector_perim",
+    "name": "扇形周长",
+    "fx": "C = 2r + (θ/360)·2πr",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      },
+      {
+        "key": "th",
+        "label": "圆心角 θ (°)",
+        "value": 90
+      }
+    ],
+    "results": [
+      {
+        "label": "弧长",
+        "value": 157.079633,
+        "unit": "mm"
+      },
+      {
+        "label": "周长",
+        "value": 357.079633,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "annulus_area",
+    "name": "环形面积",
+    "fx": "S = π(R² − r²)",
+    "fields": [
+      {
+        "key": "R",
+        "label": "外半径 R (mm)",
+        "value": 150
+      },
+      {
+        "key": "rin",
+        "label": "内半径 r (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 39269.90817,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "circle_area",
+    "name": "圆形面积",
+    "fx": "S = πr²",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 31415.926536,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "circle_perim",
+    "name": "圆形周长",
+    "fx": "C = 2πr",
+    "fields": [
+      {
+        "key": "r",
+        "label": "半径 r (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 628.318531,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "trapezoid_area",
+    "name": "梯形面积",
+    "fx": "S = (a + b)·h / 2",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 18000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "trapezoid_perim",
+    "name": "梯形周长",
+    "fx": "C = a + b + c + d",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      },
+      {
+        "key": "c",
+        "label": "边 c (mm)",
+        "value": 60
+      },
+      {
+        "key": "d",
+        "label": "边 d (mm)",
+        "value": 60
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 300,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "rhombus_area",
+    "name": "菱形面积",
+    "fx": "S = d₁·d₂ / 2",
+    "fields": [
+      {
+        "key": "d1",
+        "label": "对角线 d₁ (mm)",
+        "value": 100
+      },
+      {
+        "key": "d2",
+        "label": "对角线 d₂ (mm)",
+        "value": 80
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 4000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "rhombus_perim",
+    "name": "菱形周长",
+    "fx": "C = 4a",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 400,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "para_perim",
+    "name": "平行四边形周长",
+    "fx": "C = 2(a + b)",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 360,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "para_area",
+    "name": "平行四边形面积",
+    "fx": "S = a·h",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 20000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "tri_area",
+    "name": "等腰/直角三角形面积",
+    "fx": "S = a·h / 2  （底 × 高 ÷ 2）",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "h",
+        "label": "高 h (mm)",
+        "value": 200
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 10000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "tri_perim",
+    "name": "三角形周长",
+    "fx": "C = a + b + c",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      },
+      {
+        "key": "c",
+        "label": "边 c (mm)",
+        "value": 60
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 240,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "square_perim",
+    "name": "正方形周长",
+    "fx": "C = 4a",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 400,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "square_area",
+    "name": "正方形面积",
+    "fx": "S = a²",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 10000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "rect_calc",
+    "name": "矩形计算器",
+    "fx": "S = a·b,  C = 2(a + b)",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 8000,
+        "unit": "mm²"
+      },
+      {
+        "label": "周长",
+        "value": 360,
+        "unit": "mm"
+      }
+    ]
+  },
+  {
+    "id": "rect_area",
+    "name": "长方形面积",
+    "fx": "S = a·b",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      }
+    ],
+    "results": [
+      {
+        "label": "面积",
+        "value": 8000,
+        "unit": "mm²"
+      }
+    ]
+  },
+  {
+    "id": "rect_perim",
+    "name": "长方形周长",
+    "fx": "C = 2(a + b)",
+    "fields": [
+      {
+        "key": "a",
+        "label": "边/长 a (mm)",
+        "value": 100
+      },
+      {
+        "key": "b",
+        "label": "边/宽 b (mm)",
+        "value": 80
+      }
+    ],
+    "results": [
+      {
+        "label": "周长",
+        "value": 360,
+        "unit": "mm"
+      }
+    ]
+  }
+]

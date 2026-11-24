@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>等腰/直角三角形面积计算器 - 在线等腰/直角三角形面积计算 - 工程计算工具箱</title>
+<meta name="description" content="免费在线等腰/直角三角形面积计算器。公式：S = a·h / 2  （底 × 高 ÷ 2）。输入参数即时计算并给出结果，附参数标注示意图与计算示例。">
+<meta name="keywords" content="等腰/直角三角形面积,等腰/直角三角形面积计算,几何计算,在线计算器,等腰/直角三角形面积公式">
+<meta name="author" content="工程计算工具箱">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#6366f1">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://engcalculator.work/geometry/triangle-area/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="工程计算工具箱">
+<meta property="og:title" content="等腰/直角三角形面积计算器 - 在线等腰/直角三角形面积计算 - 工程计算工具箱">
+<meta property="og:description" content="免费在线等腰/直角三角形面积计算器。公式：S = a·h / 2  （底 × 高 ÷ 2）。输入参数即时计算并给出结果，附参数标注示意图与计算示例。">
+<meta property="og:url" content="https://engcalculator.work/geometry/triangle-area/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://engcalculator.work/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="等腰/直角三角形面积计算器 - 在线等腰/直角三角形面积计算 - 工程计算工具箱">
+<meta name="twitter:description" content="免费在线等腰/直角三角形面积计算器。公式：S = a·h / 2  （底 × 高 ÷ 2）。输入参数即时计算并给出结果，附参数标注示意图与计算示例。">
+<meta name="twitter:image" content="https://engcalculator.work/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "等腰/直角三角形面积计算器",
+      "url": "https://engcalculator.work/geometry/triangle-area/",
+      "description": "免费在线等腰/直角三角形面积计算器。公式：S = a·h / 2  （底 × 高 ÷ 2）。输入参数即时计算并给出结果，附参数标注示意图与计算示例。",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "inLanguage": [
+        "zh-CN",
+        "zh-TW",
+        "en"
+      ],
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      },
+      "featureList": "等腰/直角三角形面积,等腰/直角三角形面积计算,几何计算,在线计算器,等腰/直角三角形面积公式"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://engcalculator.work/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "几何计算器",
+          "item": "https://engcalculator.work/geometry/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "等腰/直角三角形面积",
+          "item": "https://engcalculator.work/geometry/triangle-area/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="geometry-triangle-area" data-geo-item="tri_area">
+<div class="app">
+  <!-- 左侧导航 -->
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="logo">∑</span>
+      <span class="brand-txt"><strong data-i18n="app.name">工程计算工具箱</strong><small>Engineering Toolbox</small></span>
+    </div>
+    <div class="nav-caption" data-i18n="nav.section">工具</div>
+    <nav class="nav">
+      <a class="nav-item nav-sci" href="/scientific/" data-target="view-sci">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M7.5 7h9"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>
+        </span>
+        <span class="nav-txt"><span class="nav-title" data-i18n="nav.sci">科学计算器</span><span class="nav-sub" data-i18n="nav.sci.sub">函数与运算</span></span>
+        <span class="nav-arrow">›</span>
+      </a>
+      <a class="nav-item nav-eng" href="/engineering/" data-target="view-eng">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18L12 4 3 20z"/><path d="M8 13h8"/><path d="M12 4v16"/></svg>
+        </span>
+        <span class="nav-txt"><span class="nav-title" data-i18n="nav.eng">工程计算器</span><span class="nav-sub" data-i18n="nav.eng.sub">结构与力学</span></span>
+        <span class="nav-arrow">›</span>
+      </a>
+      <a class="nav-item nav-mat" href="/materials/" data-target="view-mat">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
+        </span>
+        <span class="nav-txt"><span class="nav-title" data-i18n="nav.mat">材料计算器</span><span class="nav-sub" data-i18n="nav.mat.sub">重量与密度</span></span>
+        <span class="nav-arrow">›</span>
+      </a>
+      <a class="nav-item active nav-geo" href="/geometry/" data-target="view-geo">
+        <span class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/><path d="M12 3 19 12 12 21 5 12 12 3z"/></svg>
+        </span>
+        <span class="nav-txt"><span class="nav-title" data-i18n="nav.geo">几何计算器</span><span class="nav-sub" data-i18n="nav.geo.sub">面积与体积</span></span>
+        <span class="nav-arrow">›</span>
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="lang-row">
+        <span class="lang-label" data-i18n="lang.label">语言</span>
+        <select class="lang-select" id="langSelect" title="Language">
+          <option value="zh">简体中文</option>
+          <option value="zh-TW">繁體中文</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <button class="tbtn theme-btn" id="themeBtn" title="theme">🌙 深色</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <article class="tool-doc">
+  <nav class="doc-crumb"><a href="/">首页</a> › <a href="/geometry/">几何计算器</a> › <a href="/geometry/triangle-area/">等腰/直角三角形面积</a></nav>
+  <h1>等腰/直角三角形面积计算器</h1>
+  <p class="doc-lead">在线等腰/直角三角形面积计算器，输入参数即时得到计算结果，并在图形上标注所需参数的位置。</p>
+  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>计算公式</b><span>S = a·h / 2  （底 × 高 ÷ 2）</span></li><li><b>边/长 a</b><span>输入值 100（单位见输入框）</span></li><li><b>高 h</b><span>输入值 200（单位见输入框）</span></li></ul></section>
+  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>输入参数</th><td>边/长 a=100、高 h=200</td></tr><tr><th>面积</th><td>10000 mm²</td></tr><tr><th>说明</th><td>结果由本页计算器按默认参数实时生成，可修改参数重新计算</td></tr></table></section>
+  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
+</article>
+    <!-- 视图一：科学计算器 -->
+    <section class="view" id="view-sci">
+      <div class="toolbar">
+        <button class="tbtn active" id="angleBtn" title="DEG/RAD">DEG</button>
+        <button class="tbtn" id="histBtn" data-i18n="sci.history">历史</button>
+      </div>
+      <div class="display">
+        <div class="expr" id="expr">0</div>
+        <div class="result" id="result">0</div>
+      </div>
+      <div class="keyboard">
+        <div class="panel sci-panel" id="sciPanel"></div>
+        <div class="panel base-panel" id="basePanel"></div>
+      </div>
+      <div class="history" id="history">
+        <div class="hist-head">
+          <h3 data-i18n="sci.histTitle">计算历史</h3>
+          <button class="hist-clear" id="histClear" data-i18n="common.clear">清空</button>
+        </div>
+        <div class="hist-list" id="histList"></div>
+      </div>
+      <div class="foot" data-i18n="sci.foot">支持键盘输入 · Enter 计算 · Esc 清空 · ↑↓ 翻历史</div>
+    </section>
+
+    <!-- 视图二：工程计算器 -->
+    <section class="view" id="view-eng">
+      <div class="view-head">
+        <h2 data-i18n="eng.title">工程计算器</h2>
+        <p data-i18n="eng.subtitle">单位换算 · 截面几何特性 · 简支梁 · 应力验算</p>
+      </div>
+      <div class="tool-grid">
+        <section class="card span2">
+          <h3 data-i18n="eng.unit.title">单位换算</h3>
+          <div class="row">
+            <select id="uGroup" title="category"></select>
+            <input type="number" id="uValue" value="1" step="any">
+            <select id="uFrom" title="from"></select>
+            <span class="arrow">→</span>
+            <select id="uTo" title="to"></select>
+          </div>
+          <div id="uResults"></div>
+          <p class="note" data-i18n="eng.unit.note">修改数值即时换算；切换“目标单位”会把结果回填并作为新的原单位，可连续换算。</p>
+        </section>
+
+        <section class="card">
+          <h3 data-i18n="eng.sec.title">截面几何特性</h3>
+          <div class="tabs" id="secTabs">
+            <button class="tab active" data-sec="rect" data-i18n="eng.sec.rect">矩形</button>
+            <button class="tab" data-sec="circle" data-i18n="eng.sec.circle">圆形</button>
+            <button class="tab" data-sec="ring" data-i18n="eng.sec.ring">环形</button>
+          </div>
+          <div class="fields" id="secFields"></div>
+          <button class="primary-btn" id="secCalc" data-i18n="eng.sec.calc">计算截面特性</button>
+          <div class="result-box" id="secResult"></div>
+        </section>
+
+        <section class="card">
+          <h3 data-i18n="eng.beam.title">简支梁 · 均布荷载</h3>
+          <div class="fields">
+            <label data-i18n="eng.beam.q">均布荷载 q (kN/m)<input type="number" id="beamQ" value="10" step="any"></label>
+            <label data-i18n="eng.beam.L">跨度 L (m)<input type="number" id="beamL" value="6" step="any"></label>
+            <label data-i18n="eng.beam.E">弹性模量 E (GPa)<input type="number" id="beamE" value="206" step="any"></label>
+            <label data-i18n="eng.beam.I">惯性矩 I (mm⁴)<input type="number" id="beamI" value="100000000" step="any"></label>
+          </div>
+          <button class="primary-btn" id="beamCalc" data-i18n="eng.beam.calc">计算内力与挠度</button>
+          <div class="result-box" id="beamResult"></div>
+          <p class="note" data-i18n="eng.beam.note">M=qL²/8，V=qL/2，f=5qL⁴/(384EI)；挠度参考按 L/400 估算。</p>
+        </section>
+
+        <section class="card span2">
+          <h3 data-i18n="eng.stress.title">应力验算</h3>
+          <div class="two-col">
+            <div>
+              <h4 data-i18n="eng.stress.axial">轴心受力 σ = N / A</h4>
+              <div class="fields">
+                <label data-i18n="eng.stress.N">轴力 N (kN)<input type="number" id="stressN" value="100" step="any"></label>
+                <label data-i18n="eng.stress.A">面积 A (mm²)<input type="number" id="stressA" value="1000" step="any"></label>
+              </div>
+              <button class="primary-btn" id="stressAxialCalc" data-i18n="common.calc">计算</button>
+              <div class="result-box" id="stressAxialResult"></div>
+            </div>
+            <div>
+              <h4 data-i18n="eng.stress.bend">受弯 σ = M / W</h4>
+              <div class="fields">
+                <label data-i18n="eng.stress.M">弯矩 M (kN·m)<input type="number" id="stressM" value="50" step="any"></label>
+                <label data-i18n="eng.stress.W">截面模量 W (mm³)<input type="number" id="stressW" value="500000" step="any"></label>
+              </div>
+              <button class="primary-btn" id="stressBendCalc" data-i18n="common.calc">计算</button>
+              <div class="result-box" id="stressBendResult"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 视图三：材料计算器 -->
+    <section class="view" id="view-mat">
+      <div class="view-head">
+        <h2 data-i18n="mat.title">材料计算器</h2>
+        <p data-i18n="mat.subtitle">钢材理论重量 · 密度与重量换算</p>
+      </div>
+      <div class="tool-grid">
+        <section class="card span2">
+          <h3 data-i18n="mat.steel.title">钢材理论重量</h3>
+          <div class="row" style="margin-bottom:12px;">
+            <select id="matType" title="type" style="flex:1;"></select>
+          </div>
+          <div class="fields" id="matFields"></div>
+          <button class="primary-btn" id="matCalc" data-i18n="mat.steel.calc">计算重量</button>
+          <div class="result-box" id="matResult"></div>
+          <p class="note" id="matNote"></p>
+        </section>
+
+        <section class="card span2">
+          <h3 data-i18n="mat.dens.title">密度 / 重量 / 体积换算</h3>
+          <div class="row" style="margin-bottom:12px;">
+            <select id="densMat" title="material" style="flex:1;"></select>
+          </div>
+          <div class="fields">
+            <label data-i18n="mat.dens.vol">体积 (m³)<input type="number" id="densVol" value="1" step="any"></label>
+            <label data-i18n="mat.dens.weight">重量 (t)<input type="number" id="densWeight" value="" step="any" data-i18n-ph="mat.dens.weightPh" placeholder="填重量反算体积"></label>
+          </div>
+          <div class="row" style="margin-top:12px;">
+            <button class="tbtn" id="densVolBtn" data-i18n="mat.dens.byVol">由体积算重量</button>
+            <button class="tbtn" id="densWeightBtn" data-i18n="mat.dens.byWeight">由重量算体积</button>
+          </div>
+          <div class="result-box" id="densResult"></div>
+          <p class="density-tip" data-i18n="mat.dens.tip">密度为常见参考值（t/m³），实际以材料质保书为准。</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- 视图四：几何计算器 -->
+    <section class="view active" id="view-geo">
+      <div class="view-head">
+        <h2 data-i18n="geo.title">几何计算器</h2>
+        <p data-i18n="geo.subtitle">29 项常用几何面积 · 体积 · 周长计算</p>
+      </div>
+      <div class="tool-grid">
+        <section class="card span2">
+          <h3 data-i18n="geo.selectTitle">选择计算项</h3>
+          <div class="row" style="margin-bottom:14px;">
+            <select id="geoItem" title="item" style="flex:1;"></select>
+          </div>
+          <div class="geo-work">
+            <div class="geo-input">
+              <div class="fields" id="geoFields"></div>
+              <div class="row" style="margin-top:12px;">
+                <button class="primary-btn" id="geoCalc" data-i18n="common.calc" style="margin-top:0;">计算</button>
+                <button class="tbtn" id="geoClear" data-i18n="common.clear">清空</button>
+              </div>
+            </div>
+            <div class="geo-out">
+              <div class="geo-formula" id="geoFormula"></div>
+              <div class="result-box" id="geoResult"></div>
+            </div>
+          </div>
+          <div class="geo-figure">
+            <div class="geo-fig-title" data-i18n="geo.figTitle">图形示意（标注所需参数位置）</div>
+            <div id="geoFigure"></div>
+          </div>
+          <p class="note" data-i18n="geo.note">长度单位统一为 mm，面积结果为 mm²、体积为 mm³、周长为 mm。</p>
+        </section>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- 静态可读内容：供搜索引擎抓取，不影响上方交互工具 -->
+<footer class="seo-content"><p class="seo-copy">© 工程计算工具箱 · 免费在线科学、工程、材料与几何计算工具 · <a href="/">返回首页</a></p></footer>
+<script src="/i18n.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

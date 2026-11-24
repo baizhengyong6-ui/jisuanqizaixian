@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /.edgeone/
+
+Sitemap: https://engcalculator.work/sitemap.xml

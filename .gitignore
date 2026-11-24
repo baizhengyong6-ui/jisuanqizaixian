@@ -1,0 +1,20 @@
+# EdgeOne 本地部署缓存与项目标识
+.edgeone/
+
+# 环境变量与本地密钥
+.env
+*.key
+*.pem
+
+# 临时验证目录
+_verify_tmp/
+
+# 操作系统与编辑器噪声
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+
+# Python 缓存
+__pycache__/
+*.pyc
