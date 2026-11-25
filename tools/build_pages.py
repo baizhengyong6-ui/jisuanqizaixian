@@ -11,6 +11,13 @@ BASE = "https://engcalculator.work"
 with io.open(os.path.join(ROOT, "index.html"), encoding="utf-8") as f:
     home = f.read()
 
+# 全站工具索引块（首页页脚内，供爬虫从任意子页走遍全站）；子页页脚保留该块
+_m = re.search(r'<!-- site-index:start -->.*?<!-- site-index:end -->', home, flags=re.S)
+SITE_INDEX = _m.group(0) if _m else ''
+SUB_FOOTER = ('<footer class="seo-content">\n' + SITE_INDEX +
+              '\n  <p class="seo-copy">© 工程计算工具箱 · 免费在线科学、工程、材料与几何计算工具 · '
+              '<a href="/">返回首页</a></p></footer>')
+
 with io.open(r"C:\Users\b\WorkBuddy\2026-11-23-20-52-24\geo_data.json", encoding="utf-8") as f:
     geo = json.load(f)
 
@@ -212,9 +219,9 @@ def make_page(path, title, desc, keywords, h1, lead, formulas, example, active_v
         html = re.sub(r'class="view(?: active)?" id="%s"' % v, want, html, count=1)
     # 注入 article 到 main 内最后（计算器视图下方），让计算器功能优先展示
     html = html.replace('  </main>', '    ' + article + '\n  </main>', 1)
-    # 首页底部通用 SEO 区在子页简化掉（保留版权行）
+    # 子页页脚：保留全站工具索引（静态内链）+ 版权行，避免子页成为爬虫死胡同
     html = re.sub(r'<footer class="seo-content">.*?</footer>',
-                  '<footer class="seo-content"><p class="seo-copy">© 工程计算工具箱 · 免费在线科学、工程、材料与几何计算工具 · <a href="/">返回首页</a></p></footer>',
+                  lambda m: SUB_FOOTER,
                   html, count=1, flags=re.S)
     # sr-only h1 去掉，避免与可见 H1 重复
     html = re.sub(r'<h1 class="sr-only">.*?</h1>\s*', '', html, count=1, flags=re.S)
