@@ -17,7 +17,8 @@
       tr.style.display=hit?'':'none';
       if(hit)n++;
     });
-    if(count)count.textContent='显示 '+n+' / '+total+' 行';
+    var zh=(document.documentElement.lang||'zh').indexOf('zh')===0;
+    if(count)count.textContent=zh?('显示 '+n+' / '+total+' 行'):('Showing '+n+' / '+total+' rows');
   }
   input.addEventListener('input',update);
   if(mark)mark.addEventListener('change',update);

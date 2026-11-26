@@ -120,15 +120,15 @@
       </a>
       <a class="nav-sub-item" href="/geometry/h-beam-size-list/">
         <span class="sub-dot"></span>
-        <span class="sub-txt">H型钢截面公称尺寸、截面面积、理论重量及截面特性</span>
+        <span class="sub-txt" data-zh="H型钢截面公称尺寸、截面面积、理论重量及截面特性" data-en="H-beam sections: nominal size, area, weight &amp; properties">H型钢截面公称尺寸、截面面积、理论重量及截面特性</span>
       </a>
       <a class="nav-sub-item" href="/geometry/hk-beam-size-list/">
         <span class="sub-dot"></span>
-        <span class="sub-txt">HK型钢截面公称尺寸、截面面积、理论重量及截面特性</span>
+        <span class="sub-txt" data-zh="HK型钢截面公称尺寸、截面面积、理论重量及截面特性" data-en="HK-beam sections: nominal size, area, weight &amp; properties">HK型钢截面公称尺寸、截面面积、理论重量及截面特性</span>
       </a>
       <a class="nav-sub-item active" href="/geometry/t-beam-size-list/">
         <span class="sub-dot"></span>
-        <span class="sub-txt">剖分T型钢截面公称尺寸、截面面积、理论重量及截面特性</span>
+        <span class="sub-txt" data-zh="剖分T型钢截面公称尺寸、截面面积、理论重量及截面特性" data-en="Split T-sections: nominal size, area, weight &amp; properties">剖分T型钢截面公称尺寸、截面面积、理论重量及截面特性</span>
       </a>
     </nav>
     <div class="sidebar-foot">
@@ -147,19 +147,19 @@
   <main class="main">
     <article class="steel-doc">
   <div class="steel-toolbar">
-    <input type="text" id="steelFilter" placeholder="筛选：输入型号 / 尺寸 / 参数，如 100×50、H400、t2=12" aria-label="筛选数据">
+    <input type="text" id="steelFilter" data-zh-ph="筛选：输入型号 / 尺寸 / 参数，如 100×50、H400、t2=12" data-en-ph="Filter by model / size / parameter, e.g. 100×50, H400, t2=12" placeholder="筛选：输入型号 / 尺寸 / 参数，如 100×50、H400、t2=12" aria-label="筛选数据">
     
-    <span class="steel-count" id="steelCount">共 80 行</span>
+    <span class="steel-count" id="steelCount" data-zh="共 80 行" data-en="80 rows in total">共 80 行</span>
   </div>
   <div class="steel-scroller">
     <table class="steel-table">
-<thead><tr class='grp'><th rowspan="2">型号（高度×宽度）</th><th class="grp" colspan="5">截面公称尺寸 mm</th><th rowspan="2">截面面积 cm²</th><th rowspan="2">理论重量 kg/m</th><th rowspan="2">外表面积 m²/m</th><th class="grp" colspan="2">惯性矩 cm⁴</th><th class="grp" colspan="2">惯性半径 cm</th><th class="grp" colspan="2">截面模数 cm³</th><th rowspan="2">重心 C_x cm</th><th rowspan="2">对应H型钢型号</th></tr><tr><th>h</th><th>B</th><th>t₁</th><th>t₂</th><th>r</th><th>A</th><th>理论重量</th><th>外表面积</th><th>I_x</th><th>I_y</th><th>i_x</th><th>i_y</th><th>W_x</th><th>W_y</th></tr></thead>
+<thead><tr class='grp'><th rowspan="2" data-zh="型号（高度×宽度）" data-en="Section size (H×B)">型号（高度×宽度）</th><th class="grp" colspan="5" data-zh="截面公称尺寸 mm" data-en="Nominal dimensions (mm)">截面公称尺寸 mm</th><th rowspan="2" data-zh="截面面积 cm²" data-en="Area (cm²)">截面面积 cm²</th><th rowspan="2" data-zh="理论重量 kg/m" data-en="Theoretical weight (kg/m)">理论重量 kg/m</th><th rowspan="2" data-zh="外表面积 m²/m" data-en="Surface area (m²/m)">外表面积 m²/m</th><th class="grp" colspan="2" data-zh="惯性矩 cm⁴" data-en="Second moment I (cm⁴)">惯性矩 cm⁴</th><th class="grp" colspan="2" data-zh="惯性半径 cm" data-en="Gyration radius i (cm)">惯性半径 cm</th><th class="grp" colspan="2" data-zh="截面模数 cm³" data-en="Section modulus W (cm³)">截面模数 cm³</th><th rowspan="2" data-zh="重心 C_x cm" data-en="Centroid Cx (cm)">重心 C_x cm</th><th rowspan="2" data-zh="对应H型钢型号" data-en="Corresponding H-beam">对应H型钢型号</th></tr><tr><th>h</th><th>B</th><th>t₁</th><th>t₂</th><th>r</th><th>A</th><th>理论重量</th><th>外表面积</th><th>I_x</th><th>I_y</th><th>i_x</th><th>i_y</th><th>W_x</th><th>W_y</th></tr></thead>
       <tbody id="steelBody">
 <tr><td>T50×50</td><td>50</td><td>50</td><td>5</td><td>7</td><td>8</td><td>5.920</td><td>4.65</td><td>0.193</td><td>11.8</td><td>7.39</td><td>1.41</td><td>1.11</td><td>3.18</td><td>2.95</td><td>1.28</td><td>H100×50</td></tr><tr class="group-start"><td>T50×100</td><td>50</td><td>100</td><td>6</td><td>8</td><td>8</td><td>10.79</td><td>8.47</td><td>0.293</td><td>16.1</td><td>66.8</td><td>1.22</td><td>2.48</td><td>4.02</td><td>13.4</td><td>1.00</td><td>H100×100</td></tr><tr class="group-start"><td>T62.5×60</td><td>62.5</td><td>60</td><td>6</td><td>8</td><td>8</td><td>8.340</td><td>6.55</td><td>0.238</td><td>27.5</td><td>14.6</td><td>1.81</td><td>1.32</td><td>5.96</td><td>4.85</td><td>1.64</td><td>H125×60</td></tr><tr class="group-start"><td>T62.5×125</td><td>62.5</td><td>125</td><td>6.5</td><td>9</td><td>8</td><td>15.00</td><td>11.8</td><td>0.368</td><td>35.0</td><td>147</td><td>1.52</td><td>3.12</td><td>6.91</td><td>23.5</td><td>1.19</td><td>H125×125</td></tr><tr class="group-start"><td>T75×75</td><td>75</td><td>75</td><td>5</td><td>7</td><td>8</td><td>8.920</td><td>7.00</td><td>0.293</td><td>42.6</td><td>24.7</td><td>2.18</td><td>1.66</td><td>7.46</td><td>6.59</td><td>1.79</td><td>H150×75</td></tr><tr class="group-start"><td>T75×100</td><td>74</td><td>100</td><td>6</td><td>9</td><td>8</td><td>13.17</td><td>10.3</td><td>0.341</td><td>51.7</td><td>75.2</td><td>1.98</td><td>2.38</td><td>8.84</td><td>15.0</td><td>1.56</td><td>H150×100</td></tr><tr class="group-start"><td>T75×150</td><td>75</td><td>150</td><td>7</td><td>10</td><td>8</td><td>19.82</td><td>15.6</td><td>0.443</td><td>66.4</td><td>282</td><td>1.82</td><td>3.76</td><td>10.8</td><td>37.5</td><td>1.37</td><td>H150×150</td></tr><tr class="group-start"><td>T87.5×90</td><td>85.5</td><td>89</td><td>4</td><td>6</td><td>8</td><td>8.790</td><td>6.90</td><td>0.342</td><td>53.7</td><td>35.3</td><td>2.47</td><td>2.00</td><td>8.02</td><td>7.94</td><td>1.86</td><td>H175×90</td></tr><tr><td>T87.5×90</td><td>87.5</td><td>90</td><td>5</td><td>8</td><td>8</td><td>11.44</td><td>8.98</td><td>0.348</td><td>70.6</td><td>48.7</td><td>2.48</td><td>2.06</td><td>10.4</td><td>10.8</td><td>1.93</td><td>H175×90</td></tr><tr class="group-start"><td>T87.5×175</td><td>87.5</td><td>175</td><td>7.5</td><td>11</td><td>13</td><td>25.71</td><td>20.2</td><td>0.514</td><td>115</td><td>492</td><td>2.11</td><td>4.37</td><td>15.9</td><td>56.2</td><td>1.55</td><td>H175×175</td></tr><tr class="group-start"><td>T100×100</td><td>99</td><td>99</td><td>4.5</td><td>7</td><td>8</td><td>11.34</td><td>8.90</td><td>0.389</td><td>93.5</td><td>56.7</td><td>2.87</td><td>2.23</td><td>12.1</td><td>11.5</td><td>2.17</td><td>H200×200</td></tr><tr><td>T100×100</td><td>100</td><td>100</td><td>5.5</td><td>8</td><td>8</td><td>13.33</td><td>10.5</td><td>0.393</td><td>114</td><td>66.9</td><td>2.92</td><td>2.23</td><td>14.8</td><td>13.4</td><td>2.31</td><td>H200×200</td></tr><tr class="group-start"><td>T100×150</td><td>97</td><td>150</td><td>6</td><td>9</td><td>8</td><td>19.05</td><td>15.0</td><td>0.487</td><td>124</td><td>253</td><td>2.55</td><td>3.64</td><td>15.8</td><td>33.8</td><td>1.80</td><td>H200×150</td></tr><tr class="group-start"><td>T100×200</td><td>100</td><td>200</td><td>8</td><td>12</td><td>13</td><td>31.76</td><td>24.9</td><td>0.589</td><td>184</td><td>801</td><td>2.40</td><td>5.02</td><td>22.3</td><td>80.1</td><td>1.73</td><td>H200×200</td></tr><tr><td>T100×200</td><td>100</td><td>204</td><td>12</td><td>12</td><td>13</td><td>35.76</td><td>28.1</td><td>0.597</td><td>256</td><td>851</td><td>2.67</td><td>4.87</td><td>32.4</td><td>83.4</td><td>2.09</td><td>H200×200</td></tr><tr class="group-start"><td>T125×125</td><td>124</td><td>124</td><td>5</td><td>8</td><td>8</td><td>15.99</td><td>12.6</td><td>0.489</td><td>207</td><td>127</td><td>3.59</td><td>2.82</td><td>21.3</td><td>20.5</td><td>2.66</td><td>H250×125</td></tr><tr><td>T125×125</td><td>125</td><td>125</td><td>6</td><td>9</td><td>8</td><td>18.48</td><td>14.5</td><td>0.493</td><td>248</td><td>147</td><td>3.66</td><td>2.81</td><td>25.6</td><td>23.5</td><td>2.81</td><td>H250×125</td></tr><tr class="group-start"><td>T125×175</td><td>122</td><td>175</td><td>7</td><td>11</td><td>13</td><td>27.74</td><td>21.8</td><td>0.583</td><td>288</td><td>492</td><td>3.22</td><td>4.21</td><td>29.1</td><td>56.2</td><td>2.28</td><td>H250×175</td></tr><tr class="group-start"><td>T125×250</td><td>125</td><td>250</td><td>9</td><td>14</td><td>13</td><td>45.71</td><td>35.9</td><td>0.739</td><td>412</td><td>1820</td><td>3.00</td><td>6.31</td><td>39.5</td><td>146</td><td>2.08</td><td>H250×250</td></tr><tr><td>T125×250</td><td>125</td><td>255</td><td>14</td><td>14</td><td>13</td><td>51.96</td><td>40.8</td><td>0.749</td><td>589</td><td>1940</td><td>3.36</td><td>6.10</td><td>59.4</td><td>152</td><td>2.58</td><td>H250×250</td></tr><tr class="group-start"><td>T150×150</td><td>149</td><td>149</td><td>5.5</td><td>8</td><td>13</td><td>20.40</td><td>16.0</td><td>0.585</td><td>393</td><td>221</td><td>4.39</td><td>3.29</td><td>33.8</td><td>29.7</td><td>3.26</td><td>H300×150</td></tr><tr><td>T150×150</td><td>150</td><td>150</td><td>6.5</td><td>9</td><td>13</td><td>23.39</td><td>18.4</td><td>0.589</td><td>464</td><td>254</td><td>4.45</td><td>3.29</td><td>40.0</td><td>33.8</td><td>3.41</td><td>H300×150</td></tr><tr class="group-start"><td>T150×200</td><td>147</td><td>200</td><td>8</td><td>12</td><td>13</td><td>35.52</td><td>27.9</td><td>0.683</td><td>571</td><td>801</td><td>4.00</td><td>4.74</td><td>48.2</td><td>80.1</td><td>2.85</td><td>H300×200</td></tr><tr><td>T150×200</td><td>149</td><td>201</td><td>9</td><td>14</td><td>13</td><td>41.01</td><td>32.2</td><td>0.689</td><td>661</td><td>949</td><td>4.01</td><td>4.80</td><td>55.2</td><td>94.4</td><td>2.92</td><td>H300×200</td></tr><tr class="group-start"><td>T150×300</td><td>147</td><td>302</td><td>12</td><td>12</td><td>13</td><td>53.16</td><td>41.7</td><td>0.887</td><td>857</td><td>2760</td><td>4.01</td><td>7.20</td><td>72.3</td><td>183</td><td>2.85</td><td>H300×300</td></tr><tr><td>T150×300</td><td>150</td><td>300</td><td>10</td><td>15</td><td>13</td><td>59.22</td><td>46.5</td><td>0.889</td><td>798</td><td>3380</td><td>3.67</td><td>7.55</td><td>63.7</td><td>225</td><td>2.47</td><td>H300×300</td></tr><tr><td>T150×300</td><td>150</td><td>305</td><td>15</td><td>15</td><td>13</td><td>66.72</td><td>52.4</td><td>0.899</td><td>1110</td><td>3550</td><td>4.07</td><td>7.29</td><td>92.5</td><td>233</td><td>3.04</td><td>H300×300</td></tr><tr class="group-start"><td>T175×175</td><td>173</td><td>174</td><td>6</td><td>9</td><td>13</td><td>26.22</td><td>20.6</td><td>0.683</td><td>679</td><td>396</td><td>5.08</td><td>3.88</td><td>50.0</td><td>45.5</td><td>3.72</td><td>H350×175</td></tr><tr><td>T175×175</td><td>175</td><td>175</td><td>7</td><td>11</td><td>13</td><td>31.45</td><td>24.7</td><td>0.689</td><td>814</td><td>492</td><td>5.08</td><td>3.95</td><td>59.3</td><td>56.2</td><td>3.76</td><td>H350×175</td></tr><tr class="group-start"><td>T175×250</td><td>170</td><td>250</td><td>9</td><td>14</td><td>13</td><td>49.76</td><td>39.1</td><td>0.829</td><td>1020</td><td>1820</td><td>4.51</td><td>6.05</td><td>73.2</td><td>146</td><td>3.11</td><td>H350×250</td></tr><tr class="group-start"><td>T175×350</td><td>172</td><td>348</td><td>10</td><td>16</td><td>13</td><td>72.00</td><td>56.5</td><td>1.03</td><td>1230</td><td>5620</td><td>4.13</td><td>8.83</td><td>84.7</td><td>323</td><td>2.67</td><td>H350×350</td></tr><tr><td>T175×350</td><td>175</td><td>350</td><td>12</td><td>19</td><td>13</td><td>85.94</td><td>67.5</td><td>1.04</td><td>1520</td><td>6790</td><td>4.20</td><td>8.88</td><td>104</td><td>388</td><td>2.87</td><td>H350×350</td></tr><tr class="group-start"><td>T200×200</td><td>198</td><td>199</td><td>7</td><td>11</td><td>13</td><td>35.70</td><td>28.0</td><td>0.783</td><td>1190</td><td>723</td><td>5.77</td><td>4.50</td><td>76.4</td><td>72.7</td><td>4.20</td><td>H400×200</td></tr><tr><td>T200×200</td><td>200</td><td>200</td><td>8</td><td>13</td><td>13</td><td>41.68</td><td>32.7</td><td>0.789</td><td>1390</td><td>868</td><td>5.78</td><td>4.56</td><td>88.6</td><td>86.8</td><td>4.26</td><td>H400×200</td></tr><tr class="group-start"><td>T200×300</td><td>195</td><td>300</td><td>10</td><td>16</td><td>13</td><td>66.62</td><td>52.3</td><td>0.979</td><td>1730</td><td>3600</td><td>5.09</td><td>7.35</td><td>108</td><td>240</td><td>3.43</td><td>H400×300</td></tr><tr class="group-start"><td>T200×400</td><td>194</td><td>402</td><td>15</td><td>15</td><td>22</td><td>89.22</td><td>70.0</td><td>1.17</td><td>2480</td><td>8130</td><td>5.27</td><td>9.54</td><td>158</td><td>404</td><td>3.70</td><td>H400×400</td></tr><tr><td>T200×400</td><td>197</td><td>398</td><td>11</td><td>18</td><td>22</td><td>93.40</td><td>73.3</td><td>1.17</td><td>2050</td><td>9460</td><td>4.67</td><td>10.1</td><td>123</td><td>475</td><td>3.01</td><td>H400×400</td></tr><tr><td>T200×400</td><td>200</td><td>400</td><td>13</td><td>21</td><td>22</td><td>109.3</td><td>85.8</td><td>1.18</td><td>2480</td><td>11200</td><td>4.75</td><td>10.1</td><td>147</td><td>560</td><td>3.21</td><td>H400×400</td></tr><tr><td>T200×400</td><td>200</td><td>408</td><td>21</td><td>21</td><td>22</td><td>125.3</td><td>98.4</td><td>1.20</td><td>3650</td><td>11900</td><td>5.39</td><td>9.74</td><td>229</td><td>584</td><td>4.07</td><td>H400×400</td></tr><tr><td>T200×400</td><td>207</td><td>405</td><td>18</td><td>28</td><td>22</td><td>147.7</td><td>116</td><td>1.21</td><td>3620</td><td>15500</td><td>4.95</td><td>10.2</td><td>213</td><td>766</td><td>3.68</td><td>H400×400</td></tr><tr><td>T200×400</td><td>214</td><td>407</td><td>20</td><td>35</td><td>22</td><td>180.3</td><td>142</td><td>1.22</td><td>4380</td><td>19700</td><td>4.92</td><td>10.4</td><td>250</td><td>967</td><td>3.90</td><td>H400×400</td></tr><tr class="group-start"><td>T225×150</td><td>223</td><td>150</td><td>7</td><td>12</td><td>13</td><td>33.49</td><td>26.3</td><td>0.735</td><td>1570</td><td>338</td><td>6.84</td><td>3.17</td><td>93.7</td><td>45.1</td><td>5.54</td><td>H450×150</td></tr><tr><td>T225×150</td><td>225</td><td>151</td><td>8</td><td>14</td><td>13</td><td>38.74</td><td>30.4</td><td>0.741</td><td>1830</td><td>403</td><td>6.87</td><td>3.22</td><td>108</td><td>53.4</td><td>5.62</td><td>H450×150</td></tr><tr class="group-start"><td>T225×200</td><td>223</td><td>199</td><td>8</td><td>12</td><td>13</td><td>41.48</td><td>32.6</td><td>0.833</td><td>1870</td><td>789</td><td>6.71</td><td>4.36</td><td>109</td><td>79.3</td><td>5.15</td><td>H450×200</td></tr><tr><td>T225×200</td><td>225</td><td>200</td><td>9</td><td>14</td><td>13</td><td>47.71</td><td>37.5</td><td>0.839</td><td>2150</td><td>935</td><td>6.71</td><td>4.42</td><td>124</td><td>93.5</td><td>5.19</td><td>H450×200</td></tr><tr class="group-start"><td>T225×300</td><td>220</td><td>300</td><td>11</td><td>18</td><td>13</td><td>76.94</td><td>60.4</td><td>1.03</td><td>2680</td><td>4050</td><td>5.89</td><td>7.25</td><td>150</td><td>270</td><td>4.09</td><td>H450×300</td></tr><tr class="group-start"><td>T237.5×150</td><td>235</td><td>150</td><td>7</td><td>13</td><td>13</td><td>35.76</td><td>28.1</td><td>0.759</td><td>1850</td><td>367</td><td>7.18</td><td>3.20</td><td>104</td><td>48.9</td><td>7.50</td><td>H475×150</td></tr><tr><td>T237.5×150</td><td>237.5</td><td>151.5</td><td>8.5</td><td>15.5</td><td>13</td><td>43.07</td><td>33.8</td><td>0.767</td><td>2270</td><td>451</td><td>7.25</td><td>3.23</td><td>128</td><td>59.5</td><td>7.57</td><td>H475×150</td></tr><tr><td>T237.5×150</td><td>241</td><td>153.5</td><td>10.5</td><td>19</td><td>13</td><td>53.20</td><td>41.8</td><td>0.778</td><td>2860</td><td>575</td><td>7.33</td><td>3.28</td><td>160</td><td>75.0</td><td>7.67</td><td>H475×150</td></tr><tr class="group-start"><td>T250×150</td><td>246</td><td>150</td><td>7</td><td>12</td><td>13</td><td>35.10</td><td>27.6</td><td>0.781</td><td>2060</td><td>339</td><td>7.66</td><td>3.10</td><td>113</td><td>45.1</td><td>6.36</td><td>H500×150</td></tr><tr><td>T250×150</td><td>250</td><td>152</td><td>9</td><td>16</td><td>13</td><td>46.10</td><td>36.2</td><td>0.793</td><td>2750</td><td>470</td><td>7.71</td><td>3.19</td><td>149</td><td>61.9</td><td>6.53</td><td>H500×150</td></tr><tr><td>T250×150</td><td>252</td><td>153</td><td>10</td><td>18</td><td>13</td><td>51.66</td><td>40.6</td><td>0.799</td><td>3100</td><td>540</td><td>7.74</td><td>3.23</td><td>167</td><td>70.5</td><td>6.62</td><td>H500×150</td></tr><tr class="group-start"><td>T250×200</td><td>248</td><td>199</td><td>9</td><td>14</td><td>13</td><td>49.64</td><td>39.0</td><td>0.883</td><td>2820</td><td>921</td><td>7.54</td><td>4.30</td><td>150</td><td>92.6</td><td>5.97</td><td>H500×200</td></tr><tr><td>T250×200</td><td>250</td><td>200</td><td>10</td><td>16</td><td>13</td><td>56.12</td><td>44.1</td><td>0.889</td><td>3200</td><td>1070</td><td>7.54</td><td>4.36</td><td>169</td><td>107</td><td>6.03</td><td>H500×200</td></tr><tr><td>T250×200</td><td>253</td><td>201</td><td>11</td><td>19</td><td>13</td><td>64.65</td><td>50.8</td><td>0.897</td><td>3660</td><td>1290</td><td>7.52</td><td>4.46</td><td>189</td><td>128</td><td>6.00</td><td>H500×200</td></tr><tr class="group-start"><td>T250×300</td><td>241</td><td>300</td><td>11</td><td>15</td><td>13</td><td>70.58</td><td>55.4</td><td>1.07</td><td>3400</td><td>3380</td><td>6.93</td><td>6.91</td><td>178</td><td>225</td><td>5.00</td><td>H500×300</td></tr><tr><td>T250×300</td><td>244</td><td>300</td><td>11</td><td>18</td><td>13</td><td>79.58</td><td>62.5</td><td>1.08</td><td>3610</td><td>4050</td><td>6.73</td><td>7.13</td><td>184</td><td>270</td><td>4.72</td><td>H500×300</td></tr><tr class="group-start"><td>T275×200</td><td>273</td><td>199</td><td>9</td><td>14</td><td>13</td><td>51.89</td><td>40.7</td><td>0.933</td><td>3690</td><td>921</td><td>8.43</td><td>4.21</td><td>180</td><td>92.6</td><td>6.85</td><td>H550×200</td></tr><tr><td>T275×200</td><td>275</td><td>200</td><td>10</td><td>16</td><td>13</td><td>58.62</td><td>46.0</td><td>0.939</td><td>4180</td><td>1070</td><td>8.44</td><td>4.27</td><td>203</td><td>107</td><td>6.89</td><td>H550×200</td></tr><tr class="group-start"><td>T275×300</td><td>272</td><td>300</td><td>11</td><td>15</td><td>13</td><td>73.99</td><td>58.1</td><td>1.13</td><td>4790</td><td>3380</td><td>8.04</td><td>6.75</td><td>225</td><td>225</td><td>5.96</td><td>H550×300</td></tr><tr><td>T275×300</td><td>275</td><td>300</td><td>11</td><td>18</td><td>13</td><td>82.99</td><td>65.2</td><td>1.14</td><td>5090</td><td>4050</td><td>7.82</td><td>6.98</td><td>232</td><td>270</td><td>5.59</td><td>H550×300</td></tr><tr class="group-start"><td>T300×200</td><td>298</td><td>199</td><td>10</td><td>15</td><td>13</td><td>58.87</td><td>46.2</td><td>0.983</td><td>5150</td><td>988</td><td>9.35</td><td>4.09</td><td>235</td><td>99.3</td><td>7.92</td><td>H600×200</td></tr><tr><td>T300×200</td><td>300</td><td>200</td><td>11</td><td>17</td><td>13</td><td>65.85</td><td>51.7</td><td>0.989</td><td>5770</td><td>1140</td><td>9.35</td><td>4.15</td><td>262</td><td>114</td><td>7.95</td><td>H600×200</td></tr><tr><td>T300×200</td><td>303</td><td>201</td><td>12</td><td>20</td><td>13</td><td>74.88</td><td>58.8</td><td>0.997</td><td>6530</td><td>1360</td><td>9.33</td><td>4.25</td><td>291</td><td>135</td><td>7.88</td><td>H600×200</td></tr><tr class="group-start"><td>T300×300</td><td>291</td><td>300</td><td>12</td><td>17</td><td>13</td><td>84.60</td><td>66.4</td><td>1.17</td><td>6320</td><td>3830</td><td>8.64</td><td>6.72</td><td>280</td><td>255</td><td>6.51</td><td>H600×300</td></tr><tr><td>T300×300</td><td>294</td><td>300</td><td>12</td><td>20</td><td>13</td><td>93.60</td><td>73.5</td><td>1.18</td><td>6680</td><td>4500</td><td>8.44</td><td>6.93</td><td>288</td><td>300</td><td>6.17</td><td>H600×300</td></tr><tr><td>T300×300</td><td>297</td><td>302</td><td>14</td><td>23</td><td>13</td><td>108.5</td><td>85.2</td><td>1.19</td><td>7890</td><td>5290</td><td>8.52</td><td>6.97</td><td>339</td><td>350</td><td>6.41</td><td>H600×300</td></tr><tr class="group-start"><td>T312.5×200</td><td>312.5</td><td>198.5</td><td>13.5</td><td>17.5</td><td>13</td><td>75.28</td><td>59.1</td><td>1.01</td><td>7460</td><td>1150</td><td>9.95</td><td>3.90</td><td>338</td><td>116</td><td>9.15</td><td>H625×200</td></tr><tr><td>T312.5×200</td><td>315</td><td>200</td><td>15</td><td>20</td><td>13</td><td>84.97</td><td>66.7</td><td>1.02</td><td>8470</td><td>1340</td><td>9.98</td><td>3.97</td><td>380</td><td>134</td><td>9.21</td><td>H625×200</td></tr><tr><td>T312.5×200</td><td>319</td><td>202</td><td>17</td><td>24</td><td>13</td><td>99.35</td><td>78.0</td><td>1.03</td><td>9960</td><td>1160</td><td>10.0</td><td>4.08</td><td>440</td><td>165</td><td>9.26</td><td>H625×200</td></tr><tr class="group-start"><td>T325×300</td><td>323</td><td>299</td><td>12</td><td>18</td><td>18</td><td>91.81</td><td>72.1</td><td>1.23</td><td>8570</td><td>4020</td><td>9.66</td><td>6.61</td><td>344</td><td>269</td><td>7.36</td><td>H650×300</td></tr><tr><td>T325×300</td><td>325</td><td>300</td><td>13</td><td>20</td><td>18</td><td>101.0</td><td>79.3</td><td>1.23</td><td>9430</td><td>4510</td><td>9.66</td><td>6.67</td><td>376</td><td>300</td><td>7.40</td><td>H650×300</td></tr><tr><td>T325×300</td><td>327</td><td>301</td><td>14</td><td>22</td><td>18</td><td>110.3</td><td>86.59</td><td>1.24</td><td>10300</td><td>5010</td><td>9.66</td><td>6.73</td><td>408</td><td>333</td><td>7.45</td><td>H650×300</td></tr><tr class="group-start"><td>T350×300</td><td>346</td><td>300</td><td>13</td><td>20</td><td>18</td><td>103.8</td><td>81.5</td><td>1.28</td><td>11300</td><td>4510</td><td>10.4</td><td>6.59</td><td>424</td><td>301</td><td>8.09</td><td>H700×300</td></tr><tr><td>T350×300</td><td>350</td><td>300</td><td>13</td><td>24</td><td>18</td><td>115.8</td><td>90.9</td><td>1.28</td><td>12000</td><td>5410</td><td>10.2</td><td>6.83</td><td>438</td><td>361</td><td>7.63</td><td>H700×300</td></tr><tr class="group-start"><td>T400×300</td><td>396</td><td>300</td><td>14</td><td>22</td><td>18</td><td>119.8</td><td>94.0</td><td>1.38</td><td>17600</td><td>4960</td><td>12.1</td><td>6.43</td><td>592</td><td>331</td><td>9.78</td><td>H800×300</td></tr><tr><td>T400×300</td><td>400</td><td>300</td><td>14</td><td>26</td><td>18</td><td>131.8</td><td>103</td><td>1.38</td><td>18700</td><td>5860</td><td>11.9</td><td>6.66</td><td>610</td><td>391</td><td>9.27</td><td>H800×300</td></tr><tr class="group-start"><td>T450×300</td><td>445</td><td>299</td><td>15</td><td>23</td><td>18</td><td>133.5</td><td>105</td><td>1.47</td><td>25900</td><td>5140</td><td>13.9</td><td>6.20</td><td>789</td><td>344</td><td>11.7</td><td>H900×300</td></tr><tr><td>T450×300</td><td>450</td><td>300</td><td>16</td><td>28</td><td>18</td><td>152.9</td><td>120</td><td>1.48</td><td>29100</td><td>6320</td><td>13.8</td><td>6.42</td><td>865</td><td>421</td><td>11.4</td><td>H900×300</td></tr><tr><td>T450×300</td><td>456</td><td>302</td><td>18</td><td>34</td><td>18</td><td>180.0</td><td>141</td><td>1.50</td><td>34100</td><td>7830</td><td>13.8</td><td>6.59</td><td>997</td><td>518</td><td>11.3</td><td>H900×300</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="steel-note">数据来源：<b>GB/T 11263—2024《热轧H型钢和剖分T型钢》</b>附录规格表；剖分T型钢由对应 H 型钢于腹板中部剖分而成，C<sub>x</sub> 为截面重心至翼缘外侧距离。单击行内数据可直接阅读。筛选支持型号、任意尺寸与参数关键字。</p>
+  <p class="steel-note" data-zh="数据来源：<b>GB/T 11263—2024《热轧H型钢和剖分T型钢》</b>附录规格表；剖分T型钢由对应 H 型钢于腹板中部剖分而成，C<sub>x</sub> 为截面重心至翼缘外侧距离。单击行内数据可直接阅读。筛选支持型号、任意尺寸与参数关键字。" data-en="Source: appendix tables of <b>GB/T 11263—2024 Hot-rolled H-sections and split T-sections</b>; Split T-sections are cut from the corresponding H-beam along the mid-web; C<sub>x</sub> is the distance from the centroid to the flange outer face.Click any figure to read it directly. Filtering supports model, any dimension and parameter keywords.">数据来源：<b>GB/T 11263—2024《热轧H型钢和剖分T型钢》</b>附录规格表；剖分T型钢由对应 H 型钢于腹板中部剖分而成，C<sub>x</sub> 为截面重心至翼缘外侧距离。单击行内数据可直接阅读。筛选支持型号、任意尺寸与参数关键字。</p>
 </article>
     <!-- 视图一：科学计算器 -->
     <section class="view active" id="view-sci">
@@ -329,13 +329,20 @@
     </section>
 
     <!-- 说明文档区：置于计算器下方，计算器功能优先展示 -->
-    <article class="tool-doc">
+    <article class="tool-doc doc-lang-zh">
   <nav class="doc-crumb"><a href="/">首页</a> › <a href="/geometry/">几何计算器</a> › <a href="/geometry/t-beam-size-list/">剖分T型钢截面公称尺寸、截面面积、理论重量及截面特性</a></nav>
   <h1>剖分T型钢截面公称尺寸、截面面积、理论重量及截面特性</h1>
   <p class="doc-lead">收录剖分 T 型钢全部 80 个规格的公称尺寸、截面面积、理论重量、截面特性及重心位置 Cx，并给出对应的 H 型钢系列型号，支持关键字即时筛选。</p>
   <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas"><li><b>理论重量</b><span>m = ρ·A = 0.785 × A（kg/m，A 单位 cm²）</span></li><li><b>重心位置</b><span>Cx 为截面重心至翼缘外侧的距离（cm）</span></li><li><b>剖分关系</b><span>T 型钢由对应 H 型钢沿腹板中部剖分而成，截面面积约为对应 H 型钢的 1/2</span></li><li><b>截面模数</b><span>W = I / Cx（对翼缘外侧纤维）</span></li></ul></section>
   <section class="doc-sec"><h2>计算示例</h2><table class="doc-example"><tr><th>型号</th><td>TT50×50</td></tr><tr><th>公称尺寸</th><td>h=50 mm，B=50 mm</td></tr><tr><th>截面面积 / 重量</th><td>A = 5.920 cm² → 理论重量 4.65 kg/m</td></tr><tr><th>对应H型钢</th><td>H100×50（腹板剖分即得）</td></tr></table></section>
   <p class="doc-tip">剖分 T 型钢常用于桁架弦杆、组合梁翼缘等场合；其截面对单边不对称，验算时应取 Cx 计算截面模数。</p>
+</article><article class="tool-doc doc-lang-en">
+  <nav class="doc-crumb"><a href="/">Home</a> › <a href="/geometry/">Geometry Calculator</a> › <a href="/geometry/t-beam-size-list/">Split T-sections: Nominal Dimensions, Cross-sectional Area, Theoretical Weight &amp; Section Properties</a></nav>
+  <h1>Split T-sections: Nominal Dimensions, Cross-sectional Area, Theoretical Weight &amp; Section Properties</h1>
+  <p class="doc-lead">All 80 split T-section sizes with nominal dimensions, cross-sectional area, theoretical weight, section properties and centroid position Cx, plus the corresponding H-beam series model. Instant keyword filtering supported.</p>
+  <section class="doc-sec"><h2>Formulas</h2><ul class="doc-formulas"><li><b>Theoretical weight</b><span>m = ρ·A = 0.785 × A (kg/m, A in cm²)</span></li><li><b>Centroid</b><span>Cx = distance from the centroid to the flange outer face (cm)</span></li><li><b>Splitting relation</b><span>A T-section is the corresponding H-beam split along the mid-web; area ≈ ½ of the H-beam</span></li><li><b>Section modulus</b><span>W = I / Cx (to the flange outer fibre)</span></li></ul></section>
+  <section class="doc-sec"><h2>Worked example</h2><table class="doc-example"><tr><th>Model</th><td>TT50×50</td></tr><tr><th>Nominal size</th><td>h=50 mm, B=50 mm</td></tr><tr><th>Area / weight</th><td>A = 5.920 cm² → theoretical weight 4.65 kg/m</td></tr><tr><th>Corresponding H-beam</th><td>H100×50 (obtained by splitting the web)</td></tr></table></section>
+  <p class="doc-tip">Split T-sections are common in truss chords and composite-beam flanges. The section is asymmetric about one axis — use Cx for the section modulus check.</p>
 </article>
   </main>
 </div>
@@ -343,117 +350,117 @@
 <!-- 静态可读内容：供搜索引擎抓取，不影响上方交互工具 -->
 <footer class="seo-content">
   <section class="seo-sec">
-    <h2>关于工程计算工具箱</h2>
-    <p>工程计算工具箱是一个免费在线计算平台，把工程设计与日常工作常用的计算工具整合在一个页面里，无需安装软件、无需注册，打开浏览器即可使用。工具箱支持简体中文、繁体中文、英文等 21 种语言，并可根据访问者 IP 自动切换；支持深色与浅色主题，适配电脑和手机屏幕。</p>
-    <p>所有计算均在本地浏览器中完成，输入数据不会上传到服务器，适合工程师、设计师、施工人员、学生以及需要在现场快速核算的工程人员使用。</p>
+    <h2> data-zh="关于工程计算工具箱" data-en="About Engineering Calculator Toolbox">关于工程计算工具箱</h2>
+    <p> data-zh="工程计算工具箱是一个免费在线计算平台，把工程设计与日常工作常用的计算工具整合在一个页面里，无需安装软件、无需注册，打开浏览器即可使用。工具箱支持简体中文、繁体中文、英文等 21 种语言，并可根据访问者 IP 自动切换；支持深色与浅色主题，适配电脑和手机屏幕。" data-en="Engineering Calculator Toolbox is a free online calculation platform that brings the calculation tools used in engineering design and daily work together on one page — no software to install, no registration, just open your browser. It supports 21 languages including Simplified Chinese, Traditional Chinese and English, switches automatically by visitor IP, offers dark and light themes, and adapts to desktop and mobile screens.">工程计算工具箱是一个免费在线计算平台，把工程设计与日常工作常用的计算工具整合在一个页面里，无需安装软件、无需注册，打开浏览器即可使用。工具箱支持简体中文、繁体中文、英文等 21 种语言，并可根据访问者 IP 自动切换；支持深色与浅色主题，适配电脑和手机屏幕。</p>
+    <p> data-zh="所有计算均在本地浏览器中完成，输入数据不会上传到服务器，适合工程师、设计师、施工人员、学生以及需要在现场快速核算的工程人员使用。" data-en="All calculations run locally in your browser; no input data is uploaded to any server. It is built for engineers, designers, site staff, students and anyone who needs quick verification on the job.">所有计算均在本地浏览器中完成，输入数据不会上传到服务器，适合工程师、设计师、施工人员、学生以及需要在现场快速核算的工程人员使用。</p>
   </section>
 
   <section class="seo-sec">
-    <h2>四大计算模块</h2>
+    <h2> data-zh="四大计算模块" data-en="Four Calculation Modules">四大计算模块</h2>
     <div class="seo-grid">
       <article>
-        <h3>科学计算器</h3>
-        <p>支持四则运算、括号、幂运算、阶乘、百分号与隐式乘法，内置正弦、余弦、正切及反三角函数、对数、自然对数与平方根，可切换角度制 DEG 与弧度制 RAD，支持 π、e、ANS 常量、表达式历史记录与键盘输入。回车计算时自动补全未闭合的右括号。</p>
+        <h3> data-zh="科学计算器" data-en="Scientific Calculator">科学计算器</h3>
+        <p> data-zh="支持四则运算、括号、幂运算、阶乘、百分号与隐式乘法，内置正弦、余弦、正切及反三角函数、对数、自然对数与平方根，可切换角度制 DEG 与弧度制 RAD，支持 π、e、ANS 常量、表达式历史记录与键盘输入。回车计算时自动补全未闭合的右括号。" data-en="Arithmetic, brackets, powers, factorials, percent and implicit multiplication; built-in sine, cosine, tangent and inverse trigonometric functions, logarithms, natural log and square root; DEG/RAD switching; constants π, e and ANS; expression history and keyboard input. Pressing Enter auto-closes unbalanced brackets.">支持四则运算、括号、幂运算、阶乘、百分号与隐式乘法，内置正弦、余弦、正切及反三角函数、对数、自然对数与平方根，可切换角度制 DEG 与弧度制 RAD，支持 π、e、ANS 常量、表达式历史记录与键盘输入。回车计算时自动补全未闭合的右括号。</p>
       </article>
       <article>
-        <h3>工程计算器</h3>
-        <p>提供长度、力、应力、力矩、质量、功与功率等单位换算；矩形、圆形、环形截面的面积、惯性矩、截面模量与回转半径计算；简支梁均布荷载下的弯矩、剪力与挠度计算；以及轴心受力与受弯构件的应力验算。</p>
+        <h3> data-zh="工程计算器" data-en="Engineering Calculator">工程计算器</h3>
+        <p> data-zh="提供长度、力、应力、力矩、质量、功与功率等单位换算；矩形、圆形、环形截面的面积、惯性矩、截面模量与回转半径计算；简支梁均布荷载下的弯矩、剪力与挠度计算；以及轴心受力与受弯构件的应力验算。" data-en="Unit conversion for length, force, stress, moment, mass, work and power; area, second moment, section modulus and radius of gyration for rectangular, circular and annular sections; bending moment, shear force and deflection of simply supported beams under uniform load; and axial/bending stress checks.">提供长度、力、应力、力矩、质量、功与功率等单位换算；矩形、圆形、环形截面的面积、惯性矩、截面模量与回转半径计算；简支梁均布荷载下的弯矩、剪力与挠度计算；以及轴心受力与受弯构件的应力验算。</p>
       </article>
       <article>
-        <h3>材料计算器</h3>
-        <p>计算钢板、钢筋、钢管、角钢、槽钢、工字钢等常用钢材的理论重量；提供常见材料的密度查询，支持由体积计算重量、由重量反算体积，覆盖 12 种常用工程材料，密度单位为吨每立方米。</p>
+        <h3> data-zh="材料计算器" data-en="Materials Calculator">材料计算器</h3>
+        <p> data-zh="计算钢板、钢筋、钢管、角钢、槽钢、工字钢等常用钢材的理论重量；提供常见材料的密度查询，支持由体积计算重量、由重量反算体积，覆盖 12 种常用工程材料，密度单位为吨每立方米。" data-en="Theoretical weight of steel plates, bars, pipes, angles, channels and I-beams; density lookup for common materials with weight-from-volume and volume-from-weight conversion across 12 engineering materials in t/m³.">计算钢板、钢筋、钢管、角钢、槽钢、工字钢等常用钢材的理论重量；提供常见材料的密度查询，支持由体积计算重量、由重量反算体积，覆盖 12 种常用工程材料，密度单位为吨每立方米。</p>
       </article>
       <article>
-        <h3>几何计算器</h3>
-        <p>包含 29 项常用几何计算：圆锥表面积、圆台表面积、圆锥体积、圆台体积、圆柱侧面积、圆柱表面积、圆柱体积、长方体体积与表面积、正方体体积与表面积、扇形面积与周长、环形面积、圆形面积与周长、梯形面积与周长、菱形面积与周长、平行四边形面积与周长、三角形面积与周长、正方形面积与周长、矩形与长方形面积及周长。每项均配有标注参数位置的几何示意图。</p>
+        <h3> data-zh="几何计算器" data-en="Geometry Calculator">几何计算器</h3>
+        <p> data-zh="包含 29 项常用几何计算：圆锥表面积、圆台表面积、圆锥体积、圆台体积、圆柱侧面积、圆柱表面积、圆柱体积、长方体体积与表面积、正方体体积与表面积、扇形面积与周长、环形面积、圆形面积与周长、梯形面积与周长、菱形面积与周长、平行四边形面积与周长、三角形面积与周长、正方形面积与周长、矩形与长方形面积及周长。每项均配有标注参数位置的几何示意图。" data-en="29 common geometry calculations: cone and frustum surface area, cone and frustum volume, cylinder lateral/surface area and volume, cuboid and cube volume and surface area, sector area and perimeter, annulus area, circle area and circumference, trapezoid, rhombus, parallelogram, triangle, square and rectangle area and perimeter. Each comes with a diagram marking the required parameters.">包含 29 项常用几何计算：圆锥表面积、圆台表面积、圆锥体积、圆台体积、圆柱侧面积、圆柱表面积、圆柱体积、长方体体积与表面积、正方体体积与表面积、扇形面积与周长、环形面积、圆形面积与周长、梯形面积与周长、菱形面积与周长、平行四边形面积与周长、三角形面积与周长、正方形面积与周长、矩形与长方形面积及周长。每项均配有标注参数位置的几何示意图。</p>
       </article>
     </div>
   </section>
 
   <section class="seo-sec">
-    <h2>常见问题</h2>
+    <h2> data-zh="常见问题" data-en="FAQ">常见问题</h2>
     <div class="seo-faq">
-      <h3>这个在线计算器需要付费吗？</h3>
-      <p>不需要。工程计算工具箱所有功能免费开放，无需注册账号，打开网页即可使用。</p>
-      <h3>计算数据会上传或保存吗？</h3>
-      <p>不会。所有计算都在您的浏览器本地执行，输入的数据不会发送到服务器。仅语言与主题偏好会保存在本机浏览器中。</p>
-      <h3>支持哪些语言？</h3>
-      <p>支持简体中文、繁体中文、英文、日语、韩语、德语、法语、西班牙语、葡萄牙语、俄语、印地语、阿拉伯语等 21 种语言，首次访问会根据 IP 自动选择，也可以手动切换。</p>
-      <h3>几何计算的单位是什么？</h3>
-      <p>长度单位统一为毫米（mm），面积结果为平方毫米（mm²），体积结果为立方毫米（mm³），周长结果为毫米（mm）。</p>
-      <h3>可以在手机上使用吗？</h3>
-      <p>可以。页面采用响应式设计，在手机、平板和电脑上都能正常使用，导航栏在窄屏下会自动调整为横向布局。</p>
-      <h3>圆台体积如何计算？</h3>
-      <p>圆台体积公式为 V = ⅓πh(r² + rR + R²)，其中 r 为上底半径、R 为下底半径、h 为高。在几何计算器中选择“圆台体积”，输入这三个参数即可得到结果。</p>
+      <h3> data-zh="这个在线计算器需要付费吗？" data-en="Is this online calculator free to use?">这个在线计算器需要付费吗？</h3>
+      <p> data-zh="不需要。工程计算工具箱所有功能免费开放，无需注册账号，打开网页即可使用。" data-en="No. Every tool is free and open — no account needed, just open the page.">不需要。工程计算工具箱所有功能免费开放，无需注册账号，打开网页即可使用。</p>
+      <h3> data-zh="计算数据会上传或保存吗？" data-en="Are my inputs uploaded or stored anywhere?">计算数据会上传或保存吗？</h3>
+      <p> data-zh="不会。所有计算都在您的浏览器本地执行，输入的数据不会发送到服务器。仅语言与主题偏好会保存在本机浏览器中。" data-en="No. All calculations run locally in your browser and inputs are never sent to a server. Only your language and theme preferences are saved on your device.">不会。所有计算都在您的浏览器本地执行，输入的数据不会发送到服务器。仅语言与主题偏好会保存在本机浏览器中。</p>
+      <h3> data-zh="支持哪些语言？" data-en="Which languages are supported?">支持哪些语言？</h3>
+      <p> data-zh="支持简体中文、繁体中文、英文、日语、韩语、德语、法语、西班牙语、葡萄牙语、俄语、印地语、阿拉伯语等 21 种语言，首次访问会根据 IP 自动选择，也可以手动切换。" data-en="21 languages including Simplified Chinese, Traditional Chinese, English, Japanese, Korean, German, French, Spanish, Portuguese, Russian, Hindi and Arabic. The language is auto-selected by IP on first visit and can be switched manually.">支持简体中文、繁体中文、英文、日语、韩语、德语、法语、西班牙语、葡萄牙语、俄语、印地语、阿拉伯语等 21 种语言，首次访问会根据 IP 自动选择，也可以手动切换。</p>
+      <h3> data-zh="几何计算的单位是什么？" data-en="What units does the geometry calculator use?">几何计算的单位是什么？</h3>
+      <p> data-zh="长度单位统一为毫米（mm），面积结果为平方毫米（mm²），体积结果为立方毫米（mm³），周长结果为毫米（mm）。" data-en="Lengths are in millimetres (mm), areas in square millimetres (mm²), volumes in cubic millimetres (mm³) and perimeters in millimetres (mm).">长度单位统一为毫米（mm），面积结果为平方毫米（mm²），体积结果为立方毫米（mm³），周长结果为毫米（mm）。</p>
+      <h3> data-zh="可以在手机上使用吗？" data-en="Can I use it on a mobile phone?">可以在手机上使用吗？</h3>
+      <p> data-zh="可以。页面采用响应式设计，在手机、平板和电脑上都能正常使用，导航栏在窄屏下会自动调整为横向布局。" data-en="Yes. The pages are responsive and work on phones, tablets and desktops; the side navigation collapses to a horizontal layout on narrow screens.">可以。页面采用响应式设计，在手机、平板和电脑上都能正常使用，导航栏在窄屏下会自动调整为横向布局。</p>
+      <h3> data-zh="圆台体积如何计算？" data-en="How do I calculate the volume of a frustum?">圆台体积如何计算？</h3>
+      <p> data-zh="圆台体积公式为 V = ⅓πh(r² + rR + R²)，其中 r 为上底半径、R 为下底半径、h 为高。在几何计算器中选择“圆台体积”，输入这三个参数即可得到结果。" data-en="The frustum volume formula is V = ⅓πh(r² + rR + R²), where r is the top radius, R the bottom radius and h the height. Pick “Frustum volume” in the geometry calculator and enter these three parameters.">圆台体积公式为 V = ⅓πh(r² + rR + R²)，其中 r 为上底半径、R 为下底半径、h 为高。在几何计算器中选择“圆台体积”，输入这三个参数即可得到结果。</p>
     </div>
   </section>
   <!-- site-index:start -->
 <section class="seo-sec site-index" id="site-index">
-  <h2>全部计算工具索引（共 39 项）</h2>
-  <p class="si-lead">本站每项工具都有独立网址，可直接收藏、分享或从搜索引擎进入；点击下方任一名称即可打开对应计算器。型钢规格依据 GB/T 11263—2024 整理。</p>
+  <h2 data-zh="全部计算工具索引（共 39 项）" data-en="All calculators &amp; steel tables (39 tools)">全部计算工具索引（共 39 项）</h2>
+  <p class="si-lead" data-zh="本站每项工具都有独立网址，可直接收藏、分享或从搜索引擎进入；点击下方任一名称即可打开对应计算器。型钢规格依据 GB/T 11263—2024 整理。" data-en="Every tool on this site has its own URL — bookmark, share or find it via search. Click any name below to open the calculator. Steel section data follows GB/T 11263—2024.">本站每项工具都有独立网址，可直接收藏、分享或从搜索引擎进入；点击下方任一名称即可打开对应计算器。型钢规格依据 GB/T 11263—2024 整理。</p>
   <div class="si-groups">
     <div class="si-group">
-      <h3><a href="/scientific/">科学计算器</a><span class="si-count">1</span></h3>
+      <h3><a href="/scientific/" data-zh="科学计算器" data-en="Scientific Calculator">科学计算器</a><span class="si-count">1</span></h3>
       <ul>
-        <li><a href="/scientific/">在线科学计算器（四则 / 幂 / 阶乘 / 三角与反三角函数 / 对数）</a></li>
+        <li><a href="/scientific/" data-zh="在线科学计算器（四则 / 幂 / 阶乘 / 三角与反三角函数 / 对数）" data-en="Online scientific calculator (arithmetic / powers / factorial / trig & inverse trig / logarithms)">在线科学计算器（四则 / 幂 / 阶乘 / 三角与反三角函数 / 对数）</a></li>
       </ul>
     </div>
     <div class="si-group">
-      <h3><a href="/engineering/">工程计算器</a><span class="si-count">4</span></h3>
+      <h3><a href="/engineering/" data-zh="工程计算器" data-en="Engineering Calculator">工程计算器</a><span class="si-count">4</span></h3>
       <ul>
-        <li><a href="/engineering/unit-conversion/">工程单位换算器（长度 / 力 / 应力 / 力矩）</a></li>
-        <li><a href="/engineering/section-properties/">截面几何特性计算（面积 / 惯性矩 / 截面模量 / 回转半径）</a></li>
-        <li><a href="/engineering/simply-supported-beam/">简支梁均布荷载计算（弯矩 / 剪力 / 挠度）</a></li>
-        <li><a href="/engineering/stress-check/">构件应力验算（轴心受力 / 受弯）</a></li>
+        <li><a href="/engineering/unit-conversion/" data-zh="工程单位换算器（长度 / 力 / 应力 / 力矩）" data-en="Engineering unit converter (length / force / stress / moment)">工程单位换算器（长度 / 力 / 应力 / 力矩）</a></li>
+        <li><a href="/engineering/section-properties/" data-zh="截面几何特性计算（面积 / 惯性矩 / 截面模量 / 回转半径）" data-en="Section properties (area / moment of inertia / modulus / radius of gyration)">截面几何特性计算（面积 / 惯性矩 / 截面模量 / 回转半径）</a></li>
+        <li><a href="/engineering/simply-supported-beam/" data-zh="简支梁均布荷载计算（弯矩 / 剪力 / 挠度）" data-en="Simply supported beam under uniform load (moment / shear / deflection)">简支梁均布荷载计算（弯矩 / 剪力 / 挠度）</a></li>
+        <li><a href="/engineering/stress-check/" data-zh="构件应力验算（轴心受力 / 受弯）" data-en="Member stress check (axial force / bending)">构件应力验算（轴心受力 / 受弯）</a></li>
       </ul>
     </div>
     <div class="si-group">
-      <h3><a href="/materials/">材料计算器</a><span class="si-count">2</span></h3>
+      <h3><a href="/materials/" data-zh="材料计算器" data-en="Materials Calculator">材料计算器</a><span class="si-count">2</span></h3>
       <ul>
-        <li><a href="/materials/steel-weight/">钢材理论重量计算器（型钢 / 钢板 / 钢管）</a></li>
-        <li><a href="/materials/density-conversion/">密度重量体积换算（12 种工程材料）</a></li>
+        <li><a href="/materials/steel-weight/" data-zh="钢材理论重量计算器（型钢 / 钢板 / 钢管）" data-en="Steel theoretical weight calculator (sections / plates / pipes)">钢材理论重量计算器（型钢 / 钢板 / 钢管）</a></li>
+        <li><a href="/materials/density-conversion/" data-zh="密度重量体积换算（12 种工程材料）" data-en="Density–weight–volume converter (12 engineering materials)">密度重量体积换算（12 种工程材料）</a></li>
       </ul>
     </div>
     <div class="si-group si-group-wide">
-      <h3><a href="/geometry/">几何计算器</a><span class="si-count">29</span></h3>
+      <h3><a href="/geometry/" data-zh="几何计算器" data-en="Geometry Calculator">几何计算器</a><span class="si-count">29</span></h3>
       <ul class="si-cols">
-        <li><a href="/geometry/cone-surface-area/">圆锥表面积在线计算</a></li>
-        <li><a href="/geometry/frustum-surface-area/">圆台表面积在线计算</a></li>
-        <li><a href="/geometry/cone-volume/">圆锥体积在线计算</a></li>
-        <li><a href="/geometry/frustum-volume/">圆台体积在线计算</a></li>
-        <li><a href="/geometry/cylinder-lateral-area/">圆柱侧面积在线计算</a></li>
-        <li><a href="/geometry/cylinder-surface-area/">圆柱表面积在线计算</a></li>
-        <li><a href="/geometry/cylinder-volume/">圆柱体积在线计算</a></li>
-        <li><a href="/geometry/cuboid-volume/">长方体体积在线计算</a></li>
-        <li><a href="/geometry/cuboid-surface-area/">长方体表面积在线计算</a></li>
-        <li><a href="/geometry/cube-volume/">正方体体积在线计算</a></li>
-        <li><a href="/geometry/cube-surface-area/">正方体表面积在线计算</a></li>
-        <li><a href="/geometry/sector-area/">扇形面积在线计算</a></li>
-        <li><a href="/geometry/sector-perimeter/">扇形周长在线计算</a></li>
-        <li><a href="/geometry/annulus-area/">环形面积在线计算</a></li>
-        <li><a href="/geometry/circle-area/">圆形面积在线计算</a></li>
-        <li><a href="/geometry/circle-circumference/">圆形周长在线计算</a></li>
-        <li><a href="/geometry/trapezoid-area/">梯形面积在线计算</a></li>
-        <li><a href="/geometry/trapezoid-perimeter/">梯形周长在线计算</a></li>
-        <li><a href="/geometry/rhombus-area/">菱形面积在线计算</a></li>
-        <li><a href="/geometry/rhombus-perimeter/">菱形周长在线计算</a></li>
-        <li><a href="/geometry/parallelogram-perimeter/">平行四边形周长在线计算</a></li>
-        <li><a href="/geometry/parallelogram-area/">平行四边形面积在线计算</a></li>
-        <li><a href="/geometry/triangle-area/">等腰/直角三角形面积在线计算</a></li>
-        <li><a href="/geometry/triangle-perimeter/">三角形周长在线计算</a></li>
-        <li><a href="/geometry/square-perimeter/">正方形周长在线计算</a></li>
-        <li><a href="/geometry/square-area/">正方形面积在线计算</a></li>
-        <li><a href="/geometry/rectangle-calculator/">矩形计算器在线计算</a></li>
-        <li><a href="/geometry/rectangle-area/">长方形面积在线计算</a></li>
-        <li><a href="/geometry/rectangle-perimeter/">长方形周长在线计算</a></li>
+        <li><a href="/geometry/cone-surface-area/" data-zh="圆锥表面积在线计算" data-en="Cone surface area calculator">圆锥表面积在线计算</a></li>
+        <li><a href="/geometry/frustum-surface-area/" data-zh="圆台表面积在线计算" data-en="Frustum surface area calculator">圆台表面积在线计算</a></li>
+        <li><a href="/geometry/cone-volume/" data-zh="圆锥体积在线计算" data-en="Cone volume calculator">圆锥体积在线计算</a></li>
+        <li><a href="/geometry/frustum-volume/" data-zh="圆台体积在线计算" data-en="Frustum volume calculator">圆台体积在线计算</a></li>
+        <li><a href="/geometry/cylinder-lateral-area/" data-zh="圆柱侧面积在线计算" data-en="Cylinder lateral area calculator">圆柱侧面积在线计算</a></li>
+        <li><a href="/geometry/cylinder-surface-area/" data-zh="圆柱表面积在线计算" data-en="Cylinder surface area calculator">圆柱表面积在线计算</a></li>
+        <li><a href="/geometry/cylinder-volume/" data-zh="圆柱体积在线计算" data-en="Cylinder volume calculator">圆柱体积在线计算</a></li>
+        <li><a href="/geometry/cuboid-volume/" data-zh="长方体体积在线计算" data-en="Cuboid volume calculator">长方体体积在线计算</a></li>
+        <li><a href="/geometry/cuboid-surface-area/" data-zh="长方体表面积在线计算" data-en="Cuboid surface area calculator">长方体表面积在线计算</a></li>
+        <li><a href="/geometry/cube-volume/" data-zh="正方体体积在线计算" data-en="Cube volume calculator">正方体体积在线计算</a></li>
+        <li><a href="/geometry/cube-surface-area/" data-zh="正方体表面积在线计算" data-en="Cube surface area calculator">正方体表面积在线计算</a></li>
+        <li><a href="/geometry/sector-area/" data-zh="扇形面积在线计算" data-en="Sector area calculator">扇形面积在线计算</a></li>
+        <li><a href="/geometry/sector-perimeter/" data-zh="扇形周长在线计算" data-en="Sector perimeter calculator">扇形周长在线计算</a></li>
+        <li><a href="/geometry/annulus-area/" data-zh="环形面积在线计算" data-en="Annulus area calculator">环形面积在线计算</a></li>
+        <li><a href="/geometry/circle-area/" data-zh="圆形面积在线计算" data-en="Circle area calculator">圆形面积在线计算</a></li>
+        <li><a href="/geometry/circle-circumference/" data-zh="圆形周长在线计算" data-en="Circle circumference calculator">圆形周长在线计算</a></li>
+        <li><a href="/geometry/trapezoid-area/" data-zh="梯形面积在线计算" data-en="Trapezoid area calculator">梯形面积在线计算</a></li>
+        <li><a href="/geometry/trapezoid-perimeter/" data-zh="梯形周长在线计算" data-en="Trapezoid perimeter calculator">梯形周长在线计算</a></li>
+        <li><a href="/geometry/rhombus-area/" data-zh="菱形面积在线计算" data-en="Rhombus area calculator">菱形面积在线计算</a></li>
+        <li><a href="/geometry/rhombus-perimeter/" data-zh="菱形周长在线计算" data-en="Rhombus perimeter calculator">菱形周长在线计算</a></li>
+        <li><a href="/geometry/parallelogram-perimeter/" data-zh="平行四边形周长在线计算" data-en="Parallelogram perimeter calculator">平行四边形周长在线计算</a></li>
+        <li><a href="/geometry/parallelogram-area/" data-zh="平行四边形面积在线计算" data-en="Parallelogram area calculator">平行四边形面积在线计算</a></li>
+        <li><a href="/geometry/triangle-area/" data-zh="等腰/直角三角形面积在线计算" data-en="Isosceles/Right triangle area calculator">等腰/直角三角形面积在线计算</a></li>
+        <li><a href="/geometry/triangle-perimeter/" data-zh="三角形周长在线计算" data-en="Triangle perimeter calculator">三角形周长在线计算</a></li>
+        <li><a href="/geometry/square-perimeter/" data-zh="正方形周长在线计算" data-en="Square perimeter calculator">正方形周长在线计算</a></li>
+        <li><a href="/geometry/square-area/" data-zh="正方形面积在线计算" data-en="Square area calculator">正方形面积在线计算</a></li>
+        <li><a href="/geometry/rectangle-calculator/" data-zh="矩形计算器在线计算" data-en="Rectangle calculator calculator">矩形计算器在线计算</a></li>
+        <li><a href="/geometry/rectangle-area/" data-zh="长方形面积在线计算" data-en="Rectangle area calculator">长方形面积在线计算</a></li>
+        <li><a href="/geometry/rectangle-perimeter/" data-zh="长方形周长在线计算" data-en="Rectangle perimeter calculator">长方形周长在线计算</a></li>
       </ul>
     </div>
     <div class="si-group si-group-wide">
-      <h3><a href="/geometry/">型钢规格表（GB/T 11263—2024）</a><span class="si-count">3</span></h3>
+      <h3><a href="/geometry/" data-zh="型钢规格表（GB/T 11263—2024）" data-en="Steel Section Tables (GB/T 11263—2024)">型钢规格表（GB/T 11263—2024）</a><span class="si-count">3</span></h3>
       <ul>
-        <li><a href="/geometry/h-beam-size-list/">H 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（431 行）</a></li>
-        <li><a href="/geometry/hk-beam-size-list/">HK 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（378 行）</a></li>
-        <li><a href="/geometry/t-beam-size-list/">剖分 T 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（80 行）</a></li>
+        <li><a href="/geometry/h-beam-size-list/" data-zh="H 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（431 行）" data-en="H-beam size list · dimensions / area / weight / properties (431 rows)">H 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（431 行）</a></li>
+        <li><a href="/geometry/hk-beam-size-list/" data-zh="HK 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（378 行）" data-en="HK-beam size list · dimensions / area / weight / properties (378 rows)">HK 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（378 行）</a></li>
+        <li><a href="/geometry/t-beam-size-list/" data-zh="剖分 T 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（80 行）" data-en="Split T-section list · dimensions / area / weight / properties (80 rows)">剖分 T 型钢规格表 · 公称尺寸 / 截面面积 / 理论重量 / 截面特性（80 行）</a></li>
       </ul>
     </div>
   </div>

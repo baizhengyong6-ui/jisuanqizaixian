@@ -1120,7 +1120,16 @@
   document.getElementById('geoClear').addEventListener('click',clearGeo);
   // 语言切换时重建几何下拉、字段与按钮导航：并入 applyLang
   const _applyLang=applyLang;
-  applyLang=function(){ _applyLang(); fillGeoItems(); renderGeoFields(); buildGeoChips(); };
+  applyLang=function(){ _applyLang();
+    // 静态双语内容（data-zh / data-en）随语言切换：中文系语言显示中文，其余显示英文
+    const isZh=((lang||'zh').indexOf('zh')===0);
+    document.querySelectorAll('[data-en]').forEach(el=>{
+      el.textContent = isZh ? (el.getAttribute('data-zh')||el.textContent) : el.getAttribute('data-en');
+    });
+    document.querySelectorAll('[data-en-ph]').forEach(el=>{
+      el.placeholder = isZh ? (el.getAttribute('data-zh-ph')||el.placeholder) : el.getAttribute('data-en-ph');
+    });
+    fillGeoItems(); renderGeoFields(); buildGeoChips(); };
 
   /* ==================== 启动 ==================== */
   render();

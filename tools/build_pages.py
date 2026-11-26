@@ -34,7 +34,16 @@ TOOLS = [
                    ("三角函数", "sin、cos、tan 及反函数 arcsin、arccos、arctan，支持 DEG 角度制 / RAD 弧度制"),
                    ("对数与根式", "ln(x) 自然对数、log(x) 常用对数、√(x) 平方根，如 √(9) = 3")],
          example=[("输入表达式", "sin(30) + 2^3"), ("角度制", "DEG（30°）"),
-                  ("计算", "sin(30°)=0.5，2^3=8"), ("结果", "0.5 + 8 = 8.5")]),
+                  ("计算", "sin(30°)=0.5，2^3=8"), ("结果", "0.5 + 8 = 8.5")],
+         nameen="Scientific Calculator",
+         h1en="Online Scientific Calculator",
+         leaden="A full-expression scientific calculator: arithmetic, powers, factorials, trigonometric and inverse trigonometric functions, logarithms and square roots, with DEG/RAD switching, expression history and keyboard input. All calculations run locally in your browser.",
+         formulasen=[("Arithmetic & brackets", "a + b, a − b, a × b, a ÷ b with standard precedence; implicit multiplication such as 2(3+4)=14"),
+                     ("Powers & factorial", "a^b for powers; n! for factorial, e.g. 5! = 120"),
+                     ("Trigonometric", "sin, cos, tan and inverses arcsin, arccos, arctan, with DEG / RAD switching"),
+                     ("Logarithms & roots", "ln(x), log(x) and √(x), e.g. √(9) = 3")],
+         exampleen=[("Expression", "sin(30) + 2^3"), ("Angle unit", "DEG (30°)"),
+                    ("Compute", "sin(30°)=0.5, 2^3=8"), ("Result", "0.5 + 8 = 8.5")]),
 
     dict(path="engineering/unit-conversion", view="view-eng", sub="eng-unit", nav="eng",
          name="单位换算", kw="单位换算,长度换算,力换算,应力换算,力矩换算,质量换算,功与功率换算",
@@ -47,7 +56,17 @@ TOOLS = [
                    ("力矩", "1 kN·m = 10⁶ N·mm"),
                    ("功与功率", "1 kW·h = 3.6×10⁶ J，1 kW = 1000 W")],
          example=[("原式", "12 in"), ("目标单位", "mm"),
-                  ("换算", "12 × 25.4"), ("结果", "304.8 mm")]),
+                  ("换算", "12 × 25.4"), ("结果", "304.8 mm")],
+         nameen="Unit Converter",
+         h1en="Engineering Unit Converter",
+         leaden="Convert between common engineering units for length, force, stress, moment, mass, work and power. Values convert instantly, and switching the target unit puts the result back into the input for chained conversions.",
+         formulasen=[("Length", "1 in = 25.4 mm, 1 ft = 0.3048 m, 1 m = 1000 mm"),
+                     ("Force", "1 kN = 1000 N, 1 kgf = 9.80665 N"),
+                     ("Stress", "1 MPa = 1 N/mm² = 10⁶ Pa"),
+                     ("Moment", "1 kN·m = 10⁶ N·mm"),
+                     ("Work & power", "1 kW·h = 3.6×10⁶ J, 1 kW = 1000 W")],
+         exampleen=[("Input", "12 in"), ("Target unit", "mm"),
+                    ("Convert", "12 × 25.4"), ("Result", "304.8 mm")]),
 
     dict(path="engineering/section-properties", view="view-eng", sub="eng-sec", nav="eng",
          name="截面几何特性", kw="截面特性计算,惯性矩计算,截面模量,回转半径,矩形截面,圆形截面,环形截面",
@@ -59,7 +78,16 @@ TOOLS = [
                    ("环形截面", "A = π(R²−r²)，I = π(R⁴−r⁴)/4，W = I/R")],
          example=[("截面", "矩形 b=200 mm，h=400 mm"), ("面积 A", "200×400 = 80000 mm²"),
                   ("惯性矩 I", "200×400³/12 = 1.067×10⁹ mm⁴"),
-                  ("截面模量 W", "200×400²/6 = 5.333×10⁶ mm³")]),
+                  ("截面模量 W", "200×400²/6 = 5.333×10⁶ mm³")],
+         nameen="Section Properties",
+         h1en="Section Properties Calculator",
+         leaden="Geometric properties of common sections — area, second moment of area, section modulus and radius of gyration — ready to use in strength and stiffness checks.",
+         formulasen=[("Rectangle", "A = b·h, I = b·h³/12, W = b·h²/6, i = √(I/A)"),
+                     ("Circle", "A = πr², I = πr⁴/4, W = πr³/4, i = r/2"),
+                     ("Annulus", "A = π(R²−r²), I = π(R⁴−r⁴)/4, W = I/R")],
+         exampleen=[("Section", "Rectangle b=200 mm, h=400 mm"), ("Area A", "200×400 = 80,000 mm²"),
+                    ("Moment I", "200×400³/12 = 1.067×10⁹ mm⁴"),
+                    ("Modulus W", "200×400²/6 = 5.333×10⁶ mm³")]),
 
     dict(path="engineering/simply-supported-beam", view="view-eng", sub="eng-beam", nav="eng",
          name="简支梁均布荷载", kw="简支梁计算,均布荷载,弯矩计算,剪力计算,挠度计算,结构力学计算",
@@ -73,7 +101,18 @@ TOOLS = [
          example=[("输入", "q=10 kN/m，L=6 m，E=206 GPa，I=1×10⁸ mm⁴"),
                   ("最大弯矩", "10×6²/8 = 45 kN·m"),
                   ("最大剪力", "10×6/2 = 30 kN"),
-                  ("跨中挠度", "约 8.8 mm（满足 L/400=15 mm）")]),
+                  ("跨中挠度", "约 8.8 mm（满足 L/400=15 mm）")],
+         nameen="Simply Supported Beam",
+         h1en="Simply Supported Beam Calculator (Uniform Load)",
+         leaden="Estimate the internal forces and deflection of a simply supported beam under a uniformly distributed load; the reference deflection limit is L/400.",
+         formulasen=[("Max moment", "M = q·L²/8"),
+                     ("Max shear", "V = q·L/2"),
+                     ("Mid-span deflection", "f = 5q·L⁴/(384EI)"),
+                     ("Deflection limit", "[f] ≈ L/400 (reference)")],
+         exampleen=[("Input", "q=10 kN/m, L=6 m, E=206 GPa, I=1×10⁸ mm⁴"),
+                    ("Max moment", "10×6²/8 = 45 kN·m"),
+                    ("Max shear", "10×6/2 = 30 kN"),
+                    ("Deflection", "≈ 8.8 mm (within L/400 = 15 mm)")]),
 
     dict(path="engineering/stress-check", view="view-eng", sub="eng-stress", nav="eng",
          name="应力验算", kw="应力验算,轴心受力,受弯应力,正应力计算,钢结构应力",
@@ -86,7 +125,17 @@ TOOLS = [
          example=[("轴心受力", "N=100 kN，A=1000 mm²"),
                   ("轴心应力", "100000/1000 = 100 MPa"),
                   ("受弯应力", "M=50 kN·m，W=5×10⁵ mm³"),
-                  ("受弯结果", "50×10⁶/5×10⁵ = 100 MPa")]),
+                  ("受弯结果", "50×10⁶/5×10⁵ = 100 MPa")],
+         nameen="Stress Check",
+         h1en="Member Stress Check Calculator",
+         leaden="Normal stress for two basic load cases — axial force σ=N/A and bending σ=M/W — with kN and mm automatically converted to MPa. Useful for preliminary steel member checks.",
+         formulasen=[("Axial force", "σ = N / A (N = axial force, A = cross-sectional area)"),
+                     ("Bending", "σ = M / W (M = bending moment, W = section modulus)"),
+                     ("Unit conversion", "1 kN = 1000 N, 1 kN·m = 10⁶ N·mm, 1 MPa = 1 N/mm²")],
+         exampleen=[("Axial", "N=100 kN, A=1000 mm²"),
+                    ("Axial stress", "100000/1000 = 100 MPa"),
+                    ("Bending", "M=50 kN·m, W=5×10⁵ mm³"),
+                    ("Bending stress", "50×10⁶/5×10⁵ = 100 MPa")]),
 
     dict(path="materials/steel-weight", view="view-mat", sub="mat-steel", nav="mat",
          name="钢材理论重量", kw="钢材理论重量,钢板重量计算,钢筋重量,钢管重量,角钢重量,槽钢重量,工字钢重量",
@@ -100,7 +149,18 @@ TOOLS = [
          example=[("钢板", "厚 10 mm，面积 2 m²"),
                   ("计算", "7.85 × 10 × 2"),
                   ("结果", "157 kg"),
-                  ("说明", "实际重量以质保书或过磅为准")]),
+                  ("说明", "实际重量以质保书或过磅为准")],
+         nameen="Steel Weight",
+         h1en="Steel Theoretical Weight Calculator",
+         leaden="Theoretical weight of common steel products — plates, bars, pipes, angles, channels and I-beams — from standard nominal sizes. Handy for material planning and quantity take-off.",
+         formulasen=[("Plate", "m = 7.85 × thickness(mm) × area(m²) (kg)"),
+                     ("Round bar", "m = 0.00617 × d² (kg/m, d = diameter in mm)"),
+                     ("Steel pipe", "m = 0.02466 × wall thickness × (OD − wall thickness) (kg/m)"),
+                     ("Steel density", "Ordinary carbon steel taken as 7.85 g/cm³")],
+         exampleen=[("Plate", "10 mm thick, area 2 m²"),
+                    ("Compute", "7.85 × 10 × 2"),
+                    ("Result", "157 kg"),
+                    ("Note", "Verify actual weight against the mill certificate or weighbridge")]),
 
     dict(path="materials/density-conversion", view="view-mat", sub="mat-dens", nav="mat",
          name="密度重量体积换算", kw="密度换算,重量体积换算,密度计算器,吨立方米,材料密度",
@@ -113,7 +173,17 @@ TOOLS = [
          example=[("材料", "普通钢材 ρ = 7.85 t/m³"),
                   ("体积", "V = 2 m³"),
                   ("计算", "7.85 × 2"),
-                  ("结果", "15.7 t")]),
+                  ("结果", "15.7 t")],
+         nameen="Density–Weight–Volume Converter",
+         h1en="Density, Weight & Volume Converter",
+         leaden="Reference densities for common engineering materials with two-way volume ↔ weight conversion; density is entered in tonnes per cubic metre (t/m³).",
+         formulasen=[("Weight from volume", "m = ρ × V (weight = density × volume)"),
+                     ("Volume from weight", "V = m / ρ (volume = weight ÷ density)"),
+                     ("Units", "ρ in t/m³, V in m³, m in t")],
+         exampleen=[("Material", "Ordinary steel ρ = 7.85 t/m³"),
+                    ("Volume", "V = 2 m³"),
+                    ("Compute", "7.85 × 2"),
+                    ("Result", "15.7 t")]),
 
     dict(path="geometry", view="view-geo", sub=None, nav="geo",
          name="几何计算器", kw="几何计算器,面积计算,体积计算,周长计算,圆锥圆台圆柱计算",
@@ -128,7 +198,19 @@ TOOLS = [
          example=[("圆台体积", "r=60 mm，R=100 mm，h=200 mm"),
                   ("公式", "⅓π×200×(60²+60×100+100²)"),
                   ("结果", "约 4.105×10⁶ mm³"),
-                  ("单位", "长度 mm，体积 mm³")]),
+                  ("单位", "长度 mm，体积 mm³")],
+         nameen="Geometry Calculator",
+         h1en="Online Geometry Calculator",
+         leaden="29 common geometry calculations in one place — enter the parameters for instant results, with each parameter's position marked on the diagram. Covers cones, frustums, cylinders, prisms, sectors, trapezoids, rhombi and more.",
+         formulasen=[("Cone surface area", "S = πr² + πr·l, l = √(r²+h²)"),
+                     ("Frustum volume", "V = ⅓πh(r² + rR + R²)"),
+                     ("Cylinder volume", "V = πr²h"),
+                     ("Trapezoid area", "S = (a + b)·h / 2"),
+                     ("Triangle area", "S = a·h / 2")],
+         exampleen=[("Frustum volume", "r=60 mm, R=100 mm, h=200 mm"),
+                    ("Formula", "⅓π×200×(60²+60×100+100²)"),
+                    ("Result", "≈ 4.105×10⁶ mm³"),
+                    ("Units", "length mm, volume mm³")]),
 ]
 
 # 几何 29 项 slug
@@ -145,6 +227,21 @@ GEO_SLUG = {
     "rect_area":"rectangle-area","rect_perim":"rectangle-perimeter",
 }
 
+# ---------- i18n：zh/en 词条（供静态内容生成英文副本） ----------
+def _load_i18n_blocks():
+    txt = io.open(os.path.join(ROOT, "i18n.js"), encoding="utf-8").read()
+    def block(name):
+        m = re.search(r'(^|\n)\s*%s:\{(.*?)\n\s*\}' % re.escape(name), txt, re.S)
+        return dict(re.findall(r'"([^"]+)"\s*:\s*"([^"]*)"', m.group(2))) if m else {}
+    return block("zh"), block("en")
+
+ZH_I18N, EN_I18N = _load_i18n_blocks()
+ZH2EN = {ZH_I18N[k]: EN_I18N[k] for k in set(ZH_I18N) & set(EN_I18N)}
+
+def en_of(zh_text):
+    """中文文案 → 英文文案（含 geo 名称/字段/结果标签）；缺失返回 None"""
+    return ZH2EN.get(zh_text)
+
 def esc(s):
     return (s or "").replace("&","&amp;").replace("<","&lt;").replace(">","&gt;").replace('"',"&quot;")
 
@@ -154,26 +251,42 @@ def fmt_num(x):
         return s or "0"
     return str(x)
 
-def build_article(h1, lead, formulas, example, crumbs):
-    crumb_html = " › ".join('<a href="%s">%s</a>' % (u, esc(n)) for n, u in crumbs)
-    frows = "".join("<li><b>%s</b><span>%s</span></li>" % (esc(k), esc(v)) for k, v in formulas)
-    erows = "".join("<tr><th>%s</th><td>%s</td></tr>" % (esc(k), esc(v)) for k, v in example)
-    return """<article class="tool-doc">
+def build_article(h1, lead, formulas, example, crumbs,
+                  h1_en=None, lead_en=None, formulas_en=None, example_en=None, crumbs_en=None):
+    def _one(h1_, lead_, formulas_, example_, crumbs_, lang_cls):
+        crumb_html = " › ".join('<a href="%s">%s</a>' % (u, esc(n)) for n, u in crumbs_)
+        frows = "".join("<li><b>%s</b><span>%s</span></li>" % (esc(k), esc(v)) for k, v in formulas_)
+        erows = "".join("<tr><th>%s</th><td>%s</td></tr>" % (esc(k), esc(v)) for k, v in example_)
+        tip = ("以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。"
+               if lang_cls == "doc-lang-zh" else
+               "Results are generated live by the on-page calculator; adjust the parameters to see the full working. All calculations run locally in your browser — no data is uploaded.")
+        sec_f = "计算公式" if lang_cls == "doc-lang-zh" else "Formulas"
+        sec_e = "计算示例" if lang_cls == "doc-lang-zh" else "Worked example"
+        return """<article class="tool-doc %(cls)s">
   <nav class="doc-crumb">%(crumb)s</nav>
   <h1>%(h1)s</h1>
   <p class="doc-lead">%(lead)s</p>
-  <section class="doc-sec"><h2>计算公式</h2><ul class="doc-formulas">%(frows)s</ul></section>
-  <section class="doc-sec"><h2>计算示例</h2><table class="doc-example">%(erows)s</table></section>
-  <p class="doc-tip">以上结果由本页计算器实时生成，修改参数即可查看对应计算过程。所有计算均在浏览器本地完成，数据不上传服务器。</p>
-</article>""" % dict(crumb=crumb_html, h1=esc(h1), lead=esc(lead), frows=frows, erows=erows)
+  <section class="doc-sec"><h2>%(secf)s</h2><ul class="doc-formulas">%(frows)s</ul></section>
+  <section class="doc-sec"><h2>%(sece)s</h2><table class="doc-example">%(erows)s</table></section>
+  <p class="doc-tip">%(tip)s</p>
+</article>""" % dict(cls=lang_cls, crumb=crumb_html, h1=esc(h1_), lead=esc(lead_),
+                     secf=sec_f, sece=sec_e, frows=frows, erows=erows, tip=esc(tip))
+    zh = _one(h1, lead, formulas, example, crumbs, "doc-lang-zh")
+    if not h1_en:
+        return zh
+    en = _one(h1_en, lead_en, formulas_en, example_en, crumbs_en, "doc-lang-en")
+    return zh + "\n" + en
 
-def make_page(path, title, desc, keywords, h1, lead, formulas, example, active_view, sub, nav_active, crumbs, geo_item=None):
+def make_page(path, title, desc, keywords, h1, lead, formulas, example, active_view, sub, nav_active, crumbs,
+              geo_item=None, h1_en=None, lead_en=None, formulas_en=None, example_en=None, crumbs_en=None):
     canonical = BASE + "/" + path + "/"
-    article = build_article(h1, lead, formulas, example, crumbs)
+    article = build_article(h1, lead, formulas, example, crumbs,
+                            h1_en=h1_en, lead_en=lead_en, formulas_en=formulas_en,
+                            example_en=example_en, crumbs_en=crumbs_en)
     # 替换 head 中的 SEO meta（用标记法）
     html = home
-    # 先移除首页模板自带的说明文档区，避免与子页文档区重复
-    html = re.sub(r'\n\s*<article class="tool-doc">.*?</article>', '', html, count=1, flags=re.S)
+    # 先移除首页模板自带的说明文档区（中英两份），避免与子页文档区重复
+    html = re.sub(r'\n\s*<article class="tool-doc[^"]*">.*?</article>', '', html, flags=re.S)
     html = re.sub(r"<title>.*?</title>", "<title>%s</title>" % esc(title), html, count=1, flags=re.S)
     html = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="%s">' % esc(desc), html, count=1)
     html = re.sub(r'<meta name="keywords" content="[^"]*">', '<meta name="keywords" content="%s">' % esc(keywords), html, count=1)
@@ -239,35 +352,55 @@ HUBS = [
          h1="工程计算器", desc="免费在线工程计算器，包含单位换算、截面几何特性、简支梁均布荷载与构件应力验算，附公式与算例。",
          kw="工程计算器,单位换算,截面特性,简支梁计算,应力验算",
          subs=[("单位换算","/engineering/unit-conversion/"),("截面几何特性","/engineering/section-properties/"),
-               ("简支梁均布荷载","/engineering/simply-supported-beam/"),("应力验算","/engineering/stress-check/")]),
+               ("简支梁均布荷载","/engineering/simply-supported-beam/"),("应力验算","/engineering/stress-check/")],
+         nameen="Engineering Calculator", h1en="Engineering Calculator",
+         leaden="This category contains: Unit Converter, Section Properties, Simply Supported Beam (uniform load) and Stress Check. Open a tool from the side navigation or from the site index below.",
+         subsen=["Unit Converter","Section Properties","Simply Supported Beam","Stress Check"]),
     dict(path="materials", view="view-mat", nav="mat", name="材料计算器",
          h1="材料计算器", desc="免费在线材料计算器，包含钢材理论重量计算与密度重量体积换算，覆盖常用钢材与 12 种工程材料。",
          kw="材料计算器,钢材理论重量,密度换算,重量体积换算",
-         subs=[("钢材理论重量","/materials/steel-weight/"),("密度重量体积换算","/materials/density-conversion/")]),
+         subs=[("钢材理论重量","/materials/steel-weight/"),("密度重量体积换算","/materials/density-conversion/")],
+         nameen="Materials Calculator", h1en="Materials Calculator",
+         leaden="This category contains: Steel Theoretical Weight and Density–Weight–Volume Converter. Open a tool from the side navigation or from the site index below.",
+         subsen=["Steel Theoretical Weight","Density–Weight–Volume Converter"]),
 ]
 for h in HUBS:
-    links = "、".join('<a href="%s">%s</a>' % (u, esc(n)) for n, u in h["subs"])
-    lead = "本分类包含 " + links + "，点击可进入对应工具页面。"
+    # lead 改纯文本（原先嵌 <a> 会被 esc 转义成可见源码）
+    links_plain = "、".join(n for n, u in h["subs"])
+    lead = "本分类包含：" + links_plain + "。可通过左侧导航或下方全站索引进入对应工具页面。"
     formulas = [("分类工具", "、".join(n for n, u in h["subs"]))]
     example = [("使用说明", "选择上方任一工具进入独立页面"),("提示", "所有计算在本地浏览器完成，数据不上传")]
+    leaden = h.get("leaden") or ("This category contains: " + "、".join(h.get("subsen", [])))
+    formulasen = [("Tools in this category", ", ".join(h.get("subsen", [])))]
+    exampleen = [("How to use", "Open any tool above for its dedicated page"),
+                 ("Note", "All calculations run locally in your browser — no data is uploaded")]
     make_page(h["path"], h["h1"] + " - 工程计算工具箱", h["desc"], h["kw"],
               h["h1"], lead, formulas, example, h["view"], None, h["nav"],
-              [("首页","/"),(h["name"],"/"+h["path"]+"/")])
+              [("首页","/"),(h["name"],"/"+h["path"]+"/")],
+              h1_en=h["h1en"], lead_en=leaden, formulas_en=formulasen, example_en=exampleen,
+              crumbs_en=[("Home","/"),(h["nameen"],"/"+h["path"]+"/")])
     count += 1
 
 for t in TOOLS:
     crumbs = [("首页", "/")]
+    crumbs_en = [("Home", "/")]
     if "/" in t["path"]:
         cat, leaf = t["path"].split("/", 1)
         cat_name = {"engineering":"工程计算器","materials":"材料计算器"}[cat]
         crumbs.append((cat_name, "/" + cat + "/"))
+        crumbs_en.append(({"engineering":"Engineering Calculator","materials":"Materials Calculator"}[cat], "/" + cat + "/"))
     crumbs.append((t["name"], "/" + t["path"] + "/"))
+    crumbs_en.append((t.get("nameen", t["name"]), "/" + t["path"] + "/"))
     make_page(t["path"], t["h1"] + " - 工程计算工具箱", t["desc"], t["kw"],
               t["h1"], t["lead"], t["formulas"], t["example"],
-              t["view"], t["sub"], t["nav"], crumbs)
+              t["view"], t["sub"], t["nav"], crumbs,
+              h1_en=t.get("h1en"), lead_en=t.get("leaden"),
+              formulas_en=t.get("formulasen"), example_en=t.get("exampleen"),
+              crumbs_en=crumbs_en)
     count += 1
 
 # 几何 29 子项页面
+LATIN = re.compile(r"[\u4e00-\u9fff（）]+")
 for g in geo:
     slug = GEO_SLUG[g["id"]]
     path = "geometry/" + slug
@@ -281,10 +414,30 @@ for g in geo:
     crumbs = [("首页","/"),("几何计算器","/geometry/"),(g["name"],"/"+path+"/")]
     kw = "%s,%s计算,几何计算,在线计算器,%s公式" % (g["name"], g["name"], g["name"])
     desc = "免费在线%s计算器。公式：%s。输入参数即时计算并给出结果，附参数标注示意图与计算示例。" % (g["name"], g["fx"])
+
+    # ---- 英文副本（名称/字段/结果标签经 i18n zh→en 映射自动生成） ----
+    name_en = en_of(g["name"]) or g["name"]
+    h1_en = name_en.title()
+    if not h1_en.lower().endswith("calculator"):
+        h1_en += " Calculator"
+    lead_en = ("Online %s calculator: enter the parameters to get instant results, "
+               "with the required parameters marked on the diagram. All calculations run locally in your browser." % name_en)
+    fields_en_txt = ", ".join("%s = %s" % (en_of(ff["label"]) or ff["label"], fmt_num(ff["value"])) for ff in g["fields"])
+    formulas_en = [("Formula", g["fx"])]
+    for ff in g["fields"]:
+        formulas_en.append((en_of(ff["label"]) or LATIN.sub("", ff["label"]).strip() or ff["label"],
+                            "Input value = %s (unit shown in the input field)" % fmt_num(ff["value"])))
+    ex_en = [("Input", fields_en_txt)]
+    for r in g["results"]:
+        ex_en.append((en_of(r["label"]) or r["label"], "%s %s" % (fmt_num(r["value"]), r["unit"])))
+    ex_en.append(("Note", "Results are generated from the default parameters on this page; adjust the values to recalculate."))
+
     make_page(path, "%s计算器 - 在线%s计算 - 工程计算工具箱" % (g["name"], g["name"]),
               desc, kw, "%s计算器" % g["name"],
               "在线%s计算器，输入参数即时得到计算结果，并在图形上标注所需参数的位置。" % g["name"],
-              formulas, ex, "view-geo", None, "geo", crumbs, geo_item=g["id"])
+              formulas, ex, "view-geo", None, "geo", crumbs, geo_item=g["id"],
+              h1_en=h1_en, lead_en=lead_en, formulas_en=formulas_en, example_en=ex_en,
+              crumbs_en=[("Home","/"),("Geometry Calculator","/geometry/"),(name_en,"/"+path+"/")])
     count += 1
 
 print("生成工具页面数:", count)
