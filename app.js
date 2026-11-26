@@ -186,7 +186,14 @@
     });
   })();
   function applyLang(){
-    document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent=t(el.dataset.i18n); });
+    // 翻译 data-i18n 元素：只替换自身文本节点，保留子元素（如 label 内嵌的 input），
+    // 否则 textContent 赋值会把简支梁/应力验算等卡片里的输入框清掉
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const txt=t(el.dataset.i18n);
+      const textNodes=Array.prototype.filter.call(el.childNodes,n=>n.nodeType===3);
+      if(textNodes.length){ textNodes.forEach(n=>{ n.textContent=''; }); textNodes[0].textContent=txt; }
+      else{ el.textContent=txt; }
+    });
     document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder=t(el.dataset.i18nPh); });
     document.documentElement.lang=lang;
     const meta=META.find(m=>m.code===lang);
