@@ -14,9 +14,12 @@ if 'data-en="About Engineering Calculator Toolbox"' in h:
     raise SystemExit
 
 def wrap(tag, text, en):
-    name = tag[1:-1]  # 'h2' / 'h3' / 'p'
+    # tag 形如 '<h2>'：属性必须放在 '>' 之前，否则会生成 '<h2> data-zh=...>'，
+    # 浏览器把属性当可见文本渲染（2026-11-27 乱码事故根因）
+    name = tag[1:-1]        # 'h2' / 'h3' / 'p'
+    open_tag = tag[:-1]     # '<h2'
     old = "%s%s</%s>" % (tag, text, name)
-    new = '%s data-zh="%s" data-en="%s">%s</%s>' % (tag, text, en, text, name)
+    new = '%s data-zh="%s" data-en="%s">%s</%s>' % (open_tag, text, en, text, name)
     return old, new
 
 pairs = []

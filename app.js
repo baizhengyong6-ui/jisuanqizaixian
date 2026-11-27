@@ -1131,7 +1131,10 @@
     // 静态双语内容（data-zh / data-en）随语言切换：中文系语言显示中文，其余显示英文
     const isZh=((lang||'zh').indexOf('zh')===0);
     document.querySelectorAll('[data-en]').forEach(el=>{
-      el.textContent = isZh ? (el.getAttribute('data-zh')||el.textContent) : el.getAttribute('data-en');
+      const val = isZh ? (el.getAttribute('data-zh')||el.textContent) : el.getAttribute('data-en');
+      // 带 <b>/<sub> 等标记的文案按 HTML 渲染，避免出现可见标签字面量
+      if(el.classList.contains('steel-note')) el.innerHTML = val;
+      else el.textContent = val;
     });
     document.querySelectorAll('[data-en-ph]').forEach(el=>{
       el.placeholder = isZh ? (el.getAttribute('data-zh-ph')||el.placeholder) : el.getAttribute('data-en-ph');
